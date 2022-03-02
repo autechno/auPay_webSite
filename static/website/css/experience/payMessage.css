@@ -1,0 +1,988 @@
+.form_w {
+  position: relative;
+}
+.form_w .wallet_tit {
+  text-align: center;
+  border-bottom: 1px solid #E6E6E6;
+  padding-bottom: 30px;
+  padding-bottom: 24px;
+}
+.form_w .wallet_tit img {
+  width: 24px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.form_w .wallet_tit span {
+  font-size: 18px;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  color: #333333;
+  line-height: 25px;
+  vertical-align: middle;
+}
+.w .form_w {
+  padding: 62px 110px 36px;
+}
+.form_list {
+  border-bottom: 1px solid #E6E6E6;
+  padding: 0 0 30px;
+}
+.form_list li {
+  margin-top: 30px;
+  width: calc(100% - 70px);
+  position: relative;
+}
+.form_tit{
+  font-size: 16px;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  color: #666;
+  line-height: 22px;
+  display: inline-block;
+}
+.form_list li .form_money {
+  float: right;
+  font-size: 16px;
+  font-family: Arial;
+  color: #666;
+  line-height: 18px;
+}
+.form_copy {
+  position: absolute;
+  right: -70px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.copy_btn {
+  font-size: 0;
+  width: 60px;
+  height: 25px;
+  line-height: 25px;
+  background: rgba(51, 99, 208, .7);
+  border-radius: 2px;
+  text-align: center;
+
+}
+.copy_btn img {
+  width: 15px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.copy_btn span {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 17px;
+  vertical-align: middle;
+}
+.form_list li .form_tit i {
+  color: #748AA7;
+  font-size: 12px;
+}
+.form_list_tip {
+  margin-top: -20px;
+}
+.address_qr {
+  width: 130px;
+  height: 130px;
+  margin: 0 auto;
+  display: block;
+}
+/* 充值输入框 */
+.pay_input {
+  position: relative;
+  width: 63%;
+  height: 44px;
+  background: #FFF;
+  border: 1px solid #E6E6E6;
+  display: inline-block;
+  border-color: #3363D0;
+  vertical-align: middle;
+}
+.pay_input:focus-within {
+  border-color:#E6E6E6;
+}
+.pay_input  .t_q_tip {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pay_input input {
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  padding: 0 35px 0 20px;
+  border: none;
+}
+.pay_input_txt {
+  margin-right: 14px;
+  vertical-align: middle;
+}
+.pay_upload {
+  cursor: pointer;
+  font-size: 0;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.pay_upload img {
+  width: 16px;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+.pay_upload span {
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  color: #3363D0;
+  line-height: 20px;
+  vertical-align: middle;
+}
+.pay_input_w {
+  font-size: 0;
+}
+.pay_scan {
+  display: inline-block;
+  width: 20%;
+  height: 44px;
+  text-align: center;
+  line-height: 44px;
+  background: #FFFFFF;
+  border: 1px solid #E6E6E6;
+  float: right;
+  cursor: pointer;
+}
+.pay_scan img {
+  width: 16px;
+  vertical-align: middle;
+  margin-right: 3%;
+}
+.pay_scan span {
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #3363D0;
+  line-height: 20px;
+  vertical-align: middle;
+}
+.mobile_pay_currency {
+  display: none;
+}
+
+
+
+
+.common_btns {
+  margin-top: 38px;
+}
+.hide_copy_input {
+  position: absolute;
+  left: 5000px;
+  top: -5000px;
+}
+
+@media (max-width: 850px) {
+  .pay_input {
+    width: 60%;
+  }
+}
+@media (max-width: 840px) {
+  .w .form_w {
+    padding: 50px 15% 5%;
+  }
+  .form_tit, .form_list li .form_tit, .form_list li .form_money {
+    font-size: 13px;
+  }
+  .form_list li .form_tit i {
+    font-size: 12px;
+  }
+  .pay_scan span {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form_w .wallet_tit {
+    padding-bottom: 4%;
+  }
+  .form_w .wallet_tit span {
+    font-size: 16px;
+  }
+  .form_list {
+    padding: 4% 0;
+  }
+  .form_list_tip {
+    margin-top: -3.5%;
+  }
+  .common_button {
+    width: 45%;
+  }
+  .common_btns {
+    margin-top: 6%;
+  }
+  .pay_scan img {
+    display: none;
+  }
+  .pay_input {
+    width: 58%;
+  }
+  .pay_input input {
+    padding: 0 35px 0 10px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 680px) {
+  .w .form_w {
+    padding: 35px 5% 5% 5% !important;
+  }
+  .pay_input {
+    width: 58%;
+  }
+  .pay_input_txt {
+    margin-right: 8px;
+  }
+}
+@media (max-width: 560px) {
+  .pay_input {
+    width: 56%;
+  }
+}
+@media (max-width: 500px) {
+  .pay_scan {
+    width: 22%;
+  }
+}
+@media (max-width: 480px) {
+  .form_list li {
+    width: 100%;
+  }
+  .wallet_tit {
+    display: none;
+  }
+  .mobile_pay_currency {
+    display: block;
+  }
+  .form_tit {
+    font-size: 13px;
+    color: #999;
+    width: 95px;
+  }
+  .form_money {
+    width: calc(100% - 95px);
+    text-align: right;
+    color: #333;
+    font-size: 13px;
+  }
+  .form_tit i {
+    line-height: 100%;
+  }
+  .form_list_tip .form_tit {
+    width: 100%;
+  }
+  .pay_input {
+    width: 100%;
+    height: 32px;
+  }
+  .pay_scan {
+    width: 25%;
+  }
+  .pay_input input {
+    font-size: 12px;
+    padding: 0 25px 0 10px;
+  }
+  .pay_upload span {
+    font-size: 12px;
+  }
+  .pay_input .t_q_tip {
+    right: 5px;
+  }
+  .common_button {
+    width: 100%;
+  }
+  .mobile_copy {
+    width: 14px;
+    vertical-align: middle;
+    margin-left: 7.5px;
+  }
+  .order_address {
+    font-size: 13px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    color: #333333;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .order_address i {
+    color: #666;
+    display: block;
+  }
+  .address_qr {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
+  .mobile_view_id {
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #F9622F;
+    text-decoration: underline;
+    margin-top: 5px;
+  }
+}
+/* @media (max-width: 430px) {
+  .pay_input {
+    width: 51%;
+  }
+}
+@media (max-width: 390px) {
+  .pay_input {
+    width: 48%;
+  }
+} */
+@media (max-width: 360px) {
+  /* .pay_input {
+    width: 56%;
+  } */
+  .pay_scan {
+    width: 15%;
+  }
+  .pay_scan img {
+    display: inline-block;
+  }
+  .pay_scan span {
+    display: none;
+  }
+}
+/* @media (max-width: 340px) {
+  .pay_input {
+    width: 54%;
+  }
+} */
+
+.copy_txt {
+  cursor: pointer;
+}
+.timeout_qr {
+  display: none;
+}
+.val_tran_id {
+  display: none;
+  font-size: 12px;
+  color: #F9622F;
+}
+.val_tran_id i {
+  color: #3363D0;
+  margin-left: 3px;
+  cursor: pointer;
+}
+.viewIdTwo {
+  text-decoration: underline;
+}
+#viewIdPop-popup {
+  width: 1242px;
+}
+#viewIdPop {
+  width: 100%;
+  border-radius: inherit;
+  border-top-left-radius: inherit !important;
+  border-top-right-radius: inherit !important;
+}
+.id_des {
+  position: relative;
+}
+.view_id_pop_close {
+  position: absolute;
+  display: block;
+  right: 0%;
+  top: -9%;
+  font-size: 30px;
+  cursor: pointer;
+}
+.id_des_ul {
+  font-size: 0;
+  padding-bottom: 15px;
+}
+.id_des_ul li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+}
+.id_des_ul li:nth-last-child(1) {
+  margin-right: 0;
+}
+.id_des_ul li p {
+  font-size: 14px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #333;
+  line-height: 20px;
+  text-align: left;
+  margin: 15px 0;
+}
+@media (max-width: 1242px) {
+  #viewIdPop-popup {
+    width: 900px
+  }
+  .id_des_ul li:nth-child(1) {
+    width: 30%;
+  }
+  .id_des_ul li:nth-child(2) {
+    width: 60%;
+  }
+}
+
+@media (max-width: 768px) {
+  .id_des_ul {
+    padding: 0 15px 15px;
+  }
+  .view_id_pop_close {
+    top: -30px;
+  }
+  .id_des_ul li:nth-child(1) {
+    width: 100%;
+    margin-right: 0;
+  }
+  .id_des_ul li:nth-child(2) {
+    width: 100%;
+  }
+}
+
+
+/* 扫码 */
+.trading_qr_pc {
+  display: inline-block;
+}
+#trading_qr_mobile {
+  display: none;
+}
+
+@media (max-width: 481px) {
+  #trading_qr_pc {
+    display: none;
+  }
+  #trading_qr_mobile {
+    display: inline-block;
+  }
+}
+#qr-canvas {
+  margin: 0px auto;
+  max-width: 300px;
+}
+.video_bg {
+  background: #000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.video_bg .ui-btn {
+  position: absolute;
+  left: 5%;
+  top: 2%;
+}
+.video_wrap {
+  display: block;
+  width: 250px;
+  height: 250px;
+  position: relative;
+}
+#video {
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.scanning {
+  width: 100%;
+  height: 2px;
+  background: #6bcccd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  padding: 0;
+  margin: 0;
+  animation: scanningAn 5s linear infinite;
+  border-radius: 100%;
+}
+
+@keyframes scanningAn {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: 125px;
+  }
+  50% {
+    top: 250px;
+  }
+  75% {
+    top: 125px;
+  }
+  100% {
+    top: 0
+  }
+}
+
+/*  叹号*/
+
+#popupInfo-popup p, #qrInfo-popup p {
+  font-size: 14px;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  font-weight: 500;
+  color: #999;
+  line-height: 20px;
+  margin: 0;
+}
+#popupInfo-popup #popupInfo, #qrInfo-popup #popupInfo {
+  text-shadow: none;
+  box-shadow: none;
+}
+#popupInfo-popup .sj, #qrInfo-popup .sj {
+  display: block;
+  position: absolute;
+  right: 3%;
+  bottom: -10px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent white transparent transparent;
+}
+
+@media (max-width: 420px) {
+  #popupInfo-popup #popupInfo {
+    padding: 5px 10px;
+  }
+}
+.btn_tip {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  color: #7195A6;
+  line-height: 24px;
+  margin-top: 5px;
+}
+
+/*  扫码弹窗*/
+#trading_qr_popup-popup {
+  width: 370px;
+  height: 470px;
+}
+#trading_qr_popup {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+}
+.scan_qr_w {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  height: 100%;
+  padding-top: 50px;
+}
+.scan_qr_w {
+  width: 100%;
+  height: 100%;
+}
+.qr_frame  {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 260px;
+  height: 260px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 10px;
+}
+.qr_segmentation {
+  width: calc(100% - 60px);
+  height: 1px;
+  border-top: 1px dashed #D6D6D6;
+  display: block;
+  margin: 35px auto 0;
+}
+.scan_qr_foo {
+  text-align: center;
+  margin-top: 23px;
+}
+.scan_qr_foo img {
+  margin-bottom: 14px;
+}
+.scan_qr_foo p {
+  text-align: center;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #666666;
+  line-height: 20px;
+}
+.error_input {
+  border-color: #F9622F;
+}
+
+/*  一进来的提示*/
+.hint_pop_body {
+  padding: 30px 70px 20px;
+  text-align: left;
+}
+.hint_pop_body p {
+  font-size: 14px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #666666;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+.hint_pop_body span {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  color: #666666;
+  line-height: 24px;
+  display: block;
+}
+.hint_pop_body span:nth-child(2) {
+  margin-bottom: 10px;
+}
+.hint_pop_body i {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  color: #999;
+  line-height: 24px;
+  word-wrap: break-word;
+  word-break: break-all; 
+}
+.hint_pop_foo a {
+  background: #3363D0;
+}
+.hint_dotted {
+  position: absolute;
+  /* transform: rotate(13deg);
+  margin-top: -15px; */
+}
+@media (max-width: 480px) {
+  .hint_pop_body {
+    padding: 30px 30px 20px;
+  }
+}
+@media (max-width: 320px) {
+  .hint_dotted {
+    transform: rotate(13deg);
+    margin-top: -15px;
+    width: 50%;
+  }
+}
+#transactionCaseTwo {
+  width: 1040px;
+}
+#transactionCaseTwo .know {
+  position: absolute;
+  right: 0;
+  bottom: -45px;
+  width: 157px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background: #3363D0;
+  border-radius: 20px;
+  font-size: 14px;
+  font-family: Alibaba-PuHuiTi-R, Alibaba-PuHuiTi;
+  font-weight: normal;
+  color: #FFFFFF !important;
+  display: block;
+}
+#transactionCaseTwo .hint_dotted_two {
+  position: absolute;
+  right: 170px;
+  bottom: -90px;
+  transform: rotate(13deg);
+}
+.no_warn {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: -40%;
+}
+.no_warn input {
+  vertical-align: middle;
+}
+.no_warn span {
+  font-size: 14px;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 20px;
+  vertical-align: middle;
+  margin-left: 5px;
+}
+@media (max-width: 1100px) {
+  #transactionCaseTwo {
+    width: 95%;
+  }
+}
+@media (max-width: 1010px) {
+  #transactionCaseTwo .hint_dotted_two {
+    transform: rotate(0);
+  }
+}
+@media (max-width: 480px) {
+  #transactionCaseTwo {
+    width: 98%;
+  }
+  #transactionCaseTwo .hint_dotted_two {
+    display: none;
+  }
+  #transactionCaseTwo .know {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -50%;
+  }
+  .no_warn {
+    bottom: -80%;
+  }
+  .no_warn span {
+    font-size: 12px;
+  }
+}
+
+
+.form_pay_tip {
+  font-family: PingFangSC-Medium, PingFang SC;
+  color: #6E8AAA;
+  background: #F6F7F9;
+  width: 100% !important;
+  padding: 8px 20px 12px;
+  line-height: 24px;
+}
+.form_pay_tip p {
+  font-weight: 500;
+  font-size: 16px;
+}
+.form_pay_tip span {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: PingFang SC;
+}
+.form_pay_tip span i {
+  color: #F9622F;
+}
+@media (max-width: 480px) {
+  .form_pay_tip {
+    line-height: 20px;
+    padding: 5px 15px;
+    font-family: PingFang SC;
+  }
+  .form_pay_tip p {
+    font-size: 14px;
+    font-weight: 400;
+  }
+}
+.pay_num {
+  color: #F9622F !important;
+  /* font-size: 20px !important; */
+}
+/* @media (max-width: 840px) {
+  .pay_num {
+    font-size: 18px !important;
+  }
+}
+@media (max-width:480px) {
+  .pay_num {
+    font-size: 16px !important;
+  }
+} */
+/*  7.14 start*/
+#pay_complete {
+  margin-bottom: 20px;
+}
+@media (max-width: 480px) {
+  #pay_complete {
+    margin-bottom: 0;
+  }
+  .mobile_view_id {
+    margin-bottom: 20px;
+  }
+}
+/*  7.14 end*/
+
+/*  8.2 start*/
+.order_address span {
+  display: block;
+  word-wrap: break-word;
+  white-space: normal;
+  margin: 10px auto 0;
+  width: 65%;
+}
+/*  8.2 end*/
+
+/*  11.16start*/
+.top_data {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  padding: 0 30px;
+  font-size: 16px;
+}
+.top_data .order_time {
+  display: inline-block;
+}
+.top_data .serial_num {
+  float: right;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #6E8AAA;
+  line-height: 22px;
+  display: inline-block;
+}
+.order_time {
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #999999;
+  line-height: 22px;
+}
+.order_time i {
+  color: #F9622F;
+}
+@media (max-width: 840px) {
+  .top_data {
+    font-size: 14px;
+    top: 15px;
+  }
+}
+@media (max-width: 680px) {
+  .top_data {
+    top: 9px;
+    padding: 0 5%;
+  }
+}
+@media (max-width: 480px) {
+  .top_data {
+    font-size: 12px;
+    padding: 0 15px;
+  }
+  .top_data .serial_num {
+    float: none;
+    display: block;
+  }
+  .w .form_w {
+    padding: 45px 15px 6% !important;
+  }
+}
+.deposit_num_wrap {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  margin: 30px 0;
+}
+.deposit_num_wrap .copy_btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.deposit_num_wrap .deposit_num {
+  font-size: 16px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  line-height: 25px;
+  color: #666666;
+}
+.deposit_num_wrap .deposit_num i {
+  color: #F9622F;
+  font-size: 20px;
+}
+.deposit_num_wrap .deposit_num span {
+  color: #333333;
+}
+@media (max-width: 840px) {
+  .deposit_num_wrap {
+    margin: 24px 0;
+  }
+  .deposit_num_wrap .deposit_num {
+    font-size: 14px;
+  }
+  .deposit_num_wrap .deposit_num i {
+    font-size: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .deposit_num_wrap .deposit_num {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .deposit_num_wrap .deposit_num i {
+    font-size: 14px;
+  }
+}
+.deposit_address {
+  margin: 20px 0 40px;
+  position: relative;
+}
+.deposit_address .order_address {
+  font-size: 16px;
+  font-family: ArialMT;
+  color: #333333;
+  text-align: center;
+  line-height: 25px;
+  padding: 0 62px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.deposit_address .copy_btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+@media (max-width: 840px) {
+  .deposit_address .order_address {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .deposit_address .order_address {
+    font-size: 12px;
+    line-height: 17px;
+    padding: 0;
+  }
+  .mobile_copy_address {
+    width: 14px;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+}
+@media (max-width: 840px) {
+  .form_list li {
+    margin-top: 25px;
+  }
+  .form_list {
+    padding: 0 0 25px;
+  }
+}
+@media (max-width: 768px) {
+  .form_list li {
+    margin-top: 20px;
+  }
+  .form_list {
+    padding: 0 0 20px;
+  }
+}
+@media (max-width: 480px) {
+  .form_list li {
+    margin-top: 10px;
+  }
+  .form_list {
+    padding: 10px 0 10px;
+  }
+}
+/*  11.16end*/

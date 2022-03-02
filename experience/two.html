@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <title>支付体验_auPay</title>
+  <meta name="description" content="专注为商业客户提供解决区块链数字资产快捷支付服务，实现对多币种的充值入金渠道，节省商户平台的开发和维护成本">
+  <link rel="shortcut icon" href="../static/website/images/experience/favicon.ico">
+  <!--  公-->
+  <link rel="stylesheet" href="../static/website/css/experience/common.css">
+  <link rel="stylesheet" href="../static/website/css/experience/jui.css">
+  <link rel="stylesheet" href="../static/website/css/experience/jquery.mobile.css">
+
+  <!--  私-->
+  <link rel="stylesheet" href="../static/website/css/experience/payMessage.css">
+  <link rel="stylesheet" href="../static/website/css/experience/auToken.css">
+</head>
+
+<body>
+  <div class="warp_bg" data-role="page" style="background-image: url('../static/website/images/experience/commonBg.png');">
+    <h1 class="logo">
+      <div class="w">
+        <img src="../static/website/images/experience/logo.png" alt="">
+      </div>
+    </h1>
+    <div class="w">
+      <!--  按钮操作-->
+      <div class="view_btn">
+        <span id="viewId" style="background-color: rgba(249, 98, 47, .75);">查看交易ID示例</span>
+      </div>
+      <div class="form_w">
+        <div class="top_data">
+          <p class="order_time">订单有效时间<i></i></p>
+          <p class="serial_num">交易流水号：888888888</p>
+        </div>
+        <div class="wallet_tit">
+          <img id="walletTitIcon" src="../static/website/images/experience/BTC.png">
+          <span class="currency_txt">[[${currency}]]</span>
+        </div>
+        <ul class="form_list">
+          <li>
+            <p class="form_tit">充值金额</p>
+            <span class="form_money">888 CNY</span>
+          </li>
+          <li class="usdt_rate">
+            <p class="form_tit">参考充值汇率</p>
+            <span class="form_money"><i id="currencyRateShow">[[${currencyRate}]]</i> CNY</span>
+          </li>
+          <li class="mobile_pay_currency">
+            <p class="form_tit">充值币种</p>
+            <span class="form_money currency_txt">[[${currency}]]</span>
+          </li>
+        </ul>
+
+        <!--  支付数量-->
+        <div class="deposit_num_wrap">
+          <!--  -->
+          <p class="deposit_num">充值数量：<i id="currencyAmountI">[[${currencyAmount}]]</i> <span class="currency_txt">[[${currency}]]</span><img class="mobile_copy mobile_show" src="../static/website/images/experience/copy2.png" alt=""></p>
+          <input id="payNum" data-role="none" class="hide_copy_input" type="text">
+          <div class="copy_btn pc_show">
+            <img src="../static/website/images/experience/copy.png" alt="">
+            <span id="copyNum" class="copy_txt">复制</span>
+          </div>
+        </div>
+        <!--  二维码-->
+        <img class="address_qr normal_qr" src="../static/website/images/experience/qr.png" alt="">
+        <img class="address_qr timeout_qr" src="../static/website/images/experience/qrtimeout.png" alt="">
+
+        <div class="deposit_address">
+          <p class="order_address">abcdefghigklmnopqrstuvwxyz987654321<img class="mobile_copy_address mobile_show" src="../static/website/images/experience/copy2.png" alt=""></p>
+          <input id="payAddress" data-role="none" class="hide_copy_input" type="text">
+          <div class="copy_btn address_copy pc_show">
+            <img src="../static/website/images/experience/copy.png" alt="">
+            <span id="copyAddress" class="copy_txt">复制</span>
+          </div>
+          
+        </div>
+
+        <span class="val_tran_id">请输入正确区块链<i>「</i><i class="viewIdTwo">区块链交易ID</i><i >」</i></span>
+        <div class="common_btns">
+          <span class="mobile_show mobile_view_id">查看交易ID示例</span>
+        </div>
+        <div class="form_pay_tip">
+          <p>注意：</p>
+          <span>
+            1.请不要对支付数量进行任何调整，完全按照支付数量进行支付<br>
+            2.使用交易所转账需要考虑到提币手续费因素，确保，确保<i>到账数量为<i id="attentionAmount">[[${currencyAmount}]]</i></i><i class="currency_txt">[[${currency}]]</i><br>
+            3.请勿向上述地址充值任何非 <i class="currency_txt" style="color: #6E8AAA;">[[${currency}]]</i> 资产，否则资产将不可找回 <br>
+            4.如发现充错数量或长时间没有到账，请及时联系客服
+          </span>
+        </div>
+      </div>
+    </div>
+    <p class="copyright">auPay.one | Copyright © 2019-2021 All Rights Reserved</p>
+    
+    <!--  已复制提示弹窗-->
+    <div id="copyOk" data-role="popup" data-history="false" class="ui-content" data-theme="a">
+      <p>已复制</p>
+    </div>
+    <!-- 文字提示弹窗-->
+    <div id="text_tip" data-role="popup" data-history="false">
+      <p id="text_tip_info"></p>
+    </div>
+    <!--  查看id弹窗-->
+    <div id="viewIdPop" class="hint_pop" data-role="popup" data-history="false" data-dismissible="true" data-overlay-theme="a">
+      <div class="id_des">
+        <ul class="id_des_ul">
+          <li>
+            <p class="id_des_tit">数币钱包页面</p>
+            <div class="id_des_img"><img src="../static/website/images/experience/viewId1.jpg" alt=""></div>
+          </li>
+          <li>
+            <p class="id_des_tit">交易所页面</p>
+            <div class="id_des_img"><img src="../static/website/images/experience/viewId2.jpg" alt=""></div>
+          </li>
+        </ul>
+        <img class="view_id_pop_close" src="../static/website/images/experience/close.png" alt="">
+      </div>
+    </div>
+    <!--  页面加载提示交易ID示例one-->
+    <div id="transactionCaseOne" class="hint_pop" data-role="popup" data-history="false" data-dismissible="false" data-overlay-theme="a" data-position-to=".order_time">
+      <div class="hint_pop_tit">
+        <div class="hint_pop_tit_txt">
+          <div class="hint_pop_tit_txt_icon"><img src="../static/website/images/experience/tipIcon.png" alt=""></div>
+          <span>提示信息</span>
+        </div>
+        <img class="hint_pop_close" src="../static/website/images/experience/close2.png" alt="">
+      </div>
+      <div class="hint_pop_body">
+        <p>填写区块链交易ID，什么是交易ID？</p>
+        <span>区块链交易ID又叫交易哈希，相当于每笔数币交易的身份证明（ID），具有唯一性和不可更改性。</span>
+        <span>您可以在提币记录中找到此笔订单的交易ID：</span>
+        <i>例：<br>073957ae2439ef7eeb8e9624603886244f5339098d69cbc534c677716a7ed0528</i>
+      </div>
+      <div class="hint_pop_foo">
+        <a id="hintNext" class="confirm_btn" data-rel="popup">下一步</a>
+      </div>
+      <img class="hint_dotted" src="../static/website/images/experience/dotted.png" alt="">
+    </div>
+    <!--  页面加载提示交易ID示例two-->
+    <div id="transactionCaseTwo" class="hint_pop" data-role="popup" data-history="false" data-dismissible="false" data-overlay-theme="a" data-position-to=".form_list_tip">
+      <img class="hint_case_two" src="../static/website/images/experience/hint_img.jpg" alt="">
+      <a class="know">我已知晓，下一步</a>
+      <img class="hint_dotted_two" src="../static/website/images/experience/dotted.png" alt="">
+      <div class="no_warn">
+        <input id="warnKey" type="checkbox" name="shopping" data-role='none'><span>不再提醒</span>
+      </div>
+    </div>
+    
+   
+  </div>
+  <script src="../static/website/js/experience/jquery.js"></script>
+  <script src="../static/website/js/experience/jquery.mobile.js"></script>
+  <!--  操作cookie-->
+  <script>
+    // 删除cookie
+    function delCookie(name) {
+      var exp = new Date()
+      exp.setTime(exp.getTime() - 1)
+      var cval = getCookie(name)
+      if (cval !== null) document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString()
+    }
+    // 读取cookie
+    function getCookie(name) {
+      var arr,reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)")
+      if (arr = document.cookie.match(reg)) return unescape(arr[2])
+      else return null
+    }
+    // 设置cookie (time单位为分钟)
+    function setCookie(name, value, time) {
+      var min = 30
+      if (time) { min = time }
+      var exp = new Date();
+      exp.setTime(exp.getTime() + min * 60 * 1000)
+      if (!time) {
+        document.cookie = name + "=" + escape (value)
+      } else {
+        document.cookie = name + "=" + escape (value) + ";expires=" + exp.toGMTString()
+      }
+    }
+  </script>
+  <script>
+    var experienceAupay = JSON.parse(getCookie('experienceAupay'))
+    // 标题的icon
+    var LTC_ICON = '../static/website/images/experience/LTC.png'
+    var ETH_ICON = '../static/website/images/experience/ETH.png'
+    var ERC20_ICON = '../static/website/images/experience/ERC20.png'
+    var BTC_ICON = '../static/website/images/experience/BTC.png'
+    var OMNI_ICON = '../static/website/images/experience/OMNI.png'
+    var EOS_ICON = '../static/website/images/experience/on/EOS.png'
+    var TRC20_ICON = '../static/website/images/experience/TRC20.png'
+    var BCH_ICON = '../static/website/images/experience/BCH.png'
+    var inputLimin = { min: 64, max: 64 }
+    var agreement = experienceAupay.coinTxt;
+    $('.currency_txt').text(agreement)
+    if (agreement === 'LTC') {
+      $('#walletTitIcon').attr('src', LTC_ICON)
+    } else if (agreement === 'ETH') {
+      $('#walletTitIcon').attr('src', ETH_ICON)
+      inputLimin = { min: 64, max: 66 }
+    } else if (agreement === 'USDT-ERC20') {
+      $('#walletTitIcon').attr('src', ERC20_ICON)
+      inputLimin = { min: 64, max: 66 }
+    } else if (agreement === 'BTC') {
+      $('#walletTitIcon').attr('src', BTC_ICON)
+    } else if (agreement === 'USDT-OMNI') {
+      $('#walletTitIcon').attr('src', OMNI_ICON)
+    } else if (agreement === 'EOS') {
+      $('#walletTitIcon').attr('src', EOS_ICON)
+    } else if (agreement === 'USDT-TRC20') {
+      $('#walletTitIcon').attr('src', TRC20_ICON)
+    } else if (agreement === 'BCH') {
+      $('#walletTitIcon').attr('src', BCH_ICON)
+    } else {
+      $('#walletTitIcon').hide()
+    }
+
+    // 获取汇率
+    var usdtRate = experienceAupay.coinCur
+    if (Number(usdtRate)) {
+      $('.usdt_rate').show()
+      $('#currencyRateShow').html(Number(usdtRate))
+    } else {
+      $('.usdt_rate').hide()
+    }
+    // 复制支付数量
+    $('.mobile_copy').on('click', function() {  $('#copyNum').click() })
+    $('#copyNum').on('click', function() {
+      var payNum = experienceAupay.realityMoney
+      $('#payNum').val(payNum).select()
+      document.execCommand("copy")
+      $("#copyOk").popup('open')
+      setTimeout(function() { $("#copyOk").popup('close') }, 1000)
+    })
+    // 复制支付地址
+    $('.mobile_copy_address').on('click', function() { $('#copyAddress').click() })
+    $('#copyAddress').on('click', function() {
+      var payAddress = 'abcdefghigklmnopqrstuvwxyz987654321'
+      $('#payAddress').val(payAddress).select()
+      document.execCommand("copy")
+      $("#copyOk").popup('open')
+      setTimeout(function() { $("#copyOk").popup('close') }, 1000)
+    })
+    // 倒计时
+    // var overdueTime = new Date().getTime() + 1800000;
+    var overdueTime = new Date().getTime() + 10000;
+    // 支付倒计时 time(毫秒)
+    var payTimes = null
+    clearInterval(payTimes)
+    payTime(overdueTime)
+    function payTime(time) {
+      payTimes = setInterval(function() {
+        if (!time) {
+          $('.order_time').html('订单已超时')
+          timeoutOper()
+          clearInterval(payTimes)
+          return
+        }
+        $('.order_time').html(cumulativeTimeM(time))
+      }, 1000)
+    }
+    // 超时后的操作
+    function timeoutOper() {
+      // 显示的支付二维码
+      $('.normal_qr').hide()
+      $('.timeout_qr').css('display', 'block')
+      // 支付地址
+      $('.order_address').hide()
+      // 复制地址四个字
+      $('.address_copy').hide()
+      $('#copyAddress').hide()
+      // 立即支付按钮
+      $('.nextStep').attr('disabled', true)
+    }
+    // 毫秒转时分
+    function cumulativeTimeM(item) {
+      if (!item) {
+        clearInterval(payTimes)
+        timeoutOper()
+        return '订单已超时'
+      }
+      if (isNaN(item / 1000)) {
+        clearInterval(payTimes)
+        timeoutOper()
+        return '订单已超时'
+      }
+      if ((item / 1000 - new Date().getTime() / 1000 ) <= 0) {
+        clearInterval(payTimes)
+        timeoutOper()
+        return '订单已超时'
+      }
+      let m = ''
+      let s = ''
+      let value = parseInt(item / 1000) - parseInt(new Date().getTime() / 1000)
+      let theTime = parseInt(value) // 秒
+      let middle = 0 // 分
+      if (theTime > 60) {
+        middle = parseInt(theTime / 60)
+        theTime = parseInt(theTime % 60)
+      }
+      s = parseInt(theTime)
+      m = parseInt(middle)
+      if (Number(s) > 58) {
+        m = String(Number(m) + 1)
+        if (m.length === 1) {
+          m = '0' + m
+        }
+      // m = String(Number(m) + 1).padStart(2, '0')
+        s = '00'
+      } else {
+        s = String(Number(s) + 1)
+        if (s.length === 1) {
+          s = '0' + s
+        }
+      }
+      return '订单有效时间 <i>' + m + ':'+ s +'</i>'
+    }
+
+    // 点击查看交易id
+    $('.mobile_view_id').on('click', function() {
+      $('#viewId').click()
+    })
+    $('.viewIdTwo').on('click', function() {
+      $('#viewId').click()
+    })
+    $('#viewId').on('click', function() {
+      $('#viewIdPop').popup('open')
+    })
+    $('.view_id_pop_close').on('click', function() {
+      $('.id_des').click()
+    })
+    $('.id_des').on('click', function() {
+      $('#viewIdPop').popup('close')
+    })
+  </script>
+  
+  <!--  加载完成-->
+  <script>
+    // '0' 不开启 ‘1’ 开启
+    var ifAutoMatch = '1'
+    $(function() {
+      // 判断之前是否选择不再提醒 并且没有开启自动匹配
+      // 开启了自动匹配
+      if (ifAutoMatch === '1') {
+        $('.pay_input_w').hide()
+        $('#pay_complete').hide()
+        $('#viewId').hide()
+      }
+    })
+  </script>
+  <script>
+    var currencyAmount = experienceAupay.realityMoney
+    if (Number(currencyAmount)) {
+      $('#currencyAmountI').html(Number(currencyAmount))
+      $('#payNum').val(Number(currencyAmount))
+      $('#attentionAmount').html(Number(currencyAmount))
+    }
+  </script>
+</body>
+</html>

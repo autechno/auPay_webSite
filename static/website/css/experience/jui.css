@@ -1,0 +1,41 @@
+/*  jqMobile 样式更改*/
+.ui-btn.my-tooltip-btn, .ui-btn.my-tooltip-btn:hover, .ui-btn.my-tooltip-btn:active {
+  background: none;
+  border: 0;
+}
+/*  清除页面底部loading字样*/
+.ui-loader-default{ display:none}
+.ui-mobile-viewport{ border:none;}
+.ui-page {padding: 0; margin: 0; outline: 0}
+
+.ui-icon-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.ui-loader-default {
+  position: fixed !important;
+  z-index: 999;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  /* display: flex !important; */
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(0, 0, 0, .5) !important;
+  opacity: initial !important;
+}
+
+.ui-overlay-a {
+  background-color: #2a2a2a !important;
+}
+.ui-popup-screen {
+  position: fixed !important;
+}
+#trading_qr_popup.ui-body-inherit, #draw_address_qr_popup.ui-body-inherit {
+  box-shadow: none !important;
+}

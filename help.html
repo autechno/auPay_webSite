@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>Document</title>
+
+    <!--  公-->
+    <link rel="stylesheet" href="./static/website/css/common.css">
+    <link rel="stylesheet" href="./static/website/css/jui.css">
+    <link rel="stylesheet" href="./static/website/css//jquery.mobile.css">
+    <script src="./static/website/js/jquery.js"></script>
+    <script src="./static/website/js/jquery.mobile.js"></script>
+    <!--  私-->
+    <link rel="stylesheet" href="./static/website/css/index.css">
+    <link rel="stylesheet" href="./static/website/css//help.css">
+  </head>
+  <body>
+    <div class="help_bg" data-role="page">
+      <div class="help_w">
+        <h1 class="help_logo">
+          <img src="./static/website/img/logo2.png" alt="">
+        </h1>
+      </div>
+      <div class="help_w">
+        <div class="help_wrap">
+          <div class="help_title">
+            <i></i>
+            <p>帮助中心</p>
+          </div>
+          <!--  帮助中心导航-->
+          <ul class="help_nav">
+            <!-- <li><a class="cur">常见问题</a></li> -->
+            <li><a class="cur">钱包充币流程</a></li>
+            <li><a>交易所充币流程</a></li>
+            <li class="cur_line"></li>
+          </ul>
+
+          <!--  内容-->
+          <ul class="help_list">
+            <!-- 常见问题 -->
+            <!-- <li class="help_item">
+              <div class="qa">
+                <ul class="qa_list">
+                  <li>
+                    <p class="qa_tit">一、充币问题</p>
+                  </li>
+                  <li class="cur">
+                    <p class="problem">1、为什么我的充币数量与金额存在误差?</p>
+                    <div class="answer" style="display: block;">
+                      <i class="triangle"></i>
+                      <span>因数字资产的特殊性受汇率波动影响，各个交易所和钱包相同数币在相同的时间价值各不相同.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="problem">2、错误填写充币数量导致无法充值怎么办？?</p>
+                    <div class="answer">
+                      <i class="triangle"></i>
+                      <span>如果用户在实际支付中充币数量与auPay给出的充币数量不一致，会导致用户余额无法充值成功，在此场景下，充币确认到账之后auPay会退还本次充币数量并取消订单，但退单所产生的费用由用户自行承担，请注意正确填写充币数量.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="problem">3、区块链交易ID填错如何处理？?</p>
+                    <div class="answer">
+                      <i class="triangle"></i>
+                      <span>填错交易ID导致用户余额无法充值，但不会触发退单机制，如遇到充币成功但余额没有到账，请及时联系客服并给出该笔充币订单正确的区块链交易ID，并提供相关订单信息让客服协助解决.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="qa_tit qa_tit_line">二、提币问题</p>
+                  </li>
+                  <li>
+                    <p class="problem">1、提币长时间未到账？?</p>
+                    <div class="answer">
+                      <i class="triangle"></i>
+                      <span>auPay保障到账的时效性，会进行追加矿工费以保证到账时效。如长时间未到账请核对提币地址是否输入正确.</span>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="problem">2、提币地址输入错误怎么办？?</p>
+                    <div class="answer">
+                      <i class="triangle"></i>
+                      <span>这种情况请查看目标钱包地址是否与订单提币钱包地址一致，auPay会给出区块链交易ID与提币订单进行比对，确认此订单的真实性。如果错误填写提币地址造成数币无法找回，客户需要承担该笔订单损失.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li> -->
+            <li class="help_item">
+              <!--  钱包充币流程-->
+              <div class="wallet">
+                <ul class="process_list">
+                  <li>
+                    <p>1、打开任意钱包app，进入ETH钱包，点击<i class="blue_color">「转账」</i>按钮</p>
+                    <div class="process_img">
+                      <img src="./static/website/img/help/wallet1.jpg" alt="">
+                      <img src="./static/website/img/help/wallet2.jpg" alt="">
+                    </div>
+                  </li>
+                  <li>
+                    <p>2、进入「ETH转账」页面，右上角<i class="blue_color">「扫描二维码」</i>按钮，扫描「支付信息」页面的<i class="blue_color">「充币地址二维码」</i></p>
+                    <div class="process_img">
+                      <img src="./static/website/img/help/wallet3.jpg" alt="">
+                      <img src="./static/website/img/help/wallet4.jpg" alt="">
+                    </div>
+                  </li>
+                  <li>
+                    <p>3、扫描二维码填充收款地址。把支付页面的<i class="blue_color">「充币数量」</i>，正确填写在「ETH转账」页面的<i class="blue_color">「转账金额」</i>一栏</p>
+                    <p><i class="red_color">注：推荐您使用「推荐矿工费」，可以保障充币到账时间（不同币种需要矿工费的币种各不相同，请确认您的账户余额大于【矿工费+转账金额】才可成功完成转账）</i></p>
+                    <p>点击<i class="blue_color">「确认转账」</i>，钱包支付密码验证通过后，完成转账</p>
+                    <div class="process_img">
+                      <img src="./static/website/img/help/wallet5.jpg" alt="">
+                    </div>
+                  </li>
+                  <li>
+                    <p>4、转账完成，点击您刚刚转账的订单，进入「详情」页面。找到<i class="blue_color">「交易ID」</i>，点击复制，把交易ID填写至「支付信息」页面的<i class="blue_color">「区块链交易ID」</i>输入框内，并点击「支付完成」，
+                      或点击二维码，用<i class="blue_color">「手机扫描二维码」</i>进行填写</p>
+                    <div class="process_img">
+                      <img src="./static/website/img/help/wallet6.jpg" alt="">
+                    </div>
+                  </li>
+                  <li>
+                    <p>5、本次充值完成，等待游戏账号余额增加即可，不同数币到账时间略有差别，如长时间未到账，请联系客服协助解决</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="help_item">
+              <div class="wallet">
+                <ul class="process_list">
+                  <li>
+                    <p>1、进入交易所<i class="blue_color">「资产-币币账户」</i></p>
+                    <div class="process_img">
+                      <img src="./static/website/img/help/exchange1.jpg" alt="">
+                    </div>
+                  </li>
+                  <li>
+                    <p>2、进入「支付信息」页面，<i class="blue_color">复制充币地址</i>，填入交易所的<i class="blue_color">「提币地址」</i>输入框内，<i class="blue_color">复制页面的充币数量</i>，填写至<i class="blue_color">「数量」</i>输入框</p>
+                    <div class="process_img">
+                      <img src="./static/website/img/help/exchange2.jpg" alt="">
+                      <img class="max_img" src="./static/website/img/help/exchange3.png" alt="">
+                    </div>
+                  </li>
+                  <li>
+                    <p>3、注意，此处，<i class="red_color">「充值数量」必须与「到账数量」一致</i>，否则会导致本次无法充值成功「交易所提币数量=充值页面充值数量+交易所提币手续费」。</p>
+                    <div class="process_img">
+                      <img src="./static/website/img/help/exchange4.jpg" alt="">
+                      <img class="max_img" src="./static/website/img/help/exchange5.jpg" alt="">
+                    </div>
+                  </li>
+                  <li>
+                    <p>4、点击<i class="blue_color">「提币」</i>，交易所支付验证通过，则提币成功。提币完成后，点击「币币账户」页面右上角的<i class="blue_color">「财务记录」</i>，找到这笔订单</p>
+                    <div class="process_img">
+                      <img class="max_img" src="./static/website/img/help/exchange6.jpg" alt="">
+                    </div>
+                  </li>
+                  <li>
+                    <p>5、点击<i class="blue_color">「详情」</i>，展示订单详情，复制该<i class="blue_color">「区块链交易ID」</i>，填写至<i class="blue_color">「支付信息」页面的「区块链交易ID」</i>输入框</p>
+                    <div class="process_img">
+                      <img class="max_img" src="./static/website/img/help/exchange7.jpg" alt="">
+                      <img src="./static/website/img/help/exchange8.jpg" alt="">
+                    </div>
+                  </li>
+                  <li>
+                    <p>6、点击「支付完成」，完成充币，等待游戏账户余额增加</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="help_copyright">auPay.one | Copyright © 2020 All Rights Reserved</p>
+    </div>
+
+    <script>
+      $(function() {
+        $('.cur_line').css('left', $('.help_nav li').eq(0).position().left).width($('.help_nav li').eq(0).width())
+      })
+      $('.help_nav li').click(function() {
+        $(this).children('a').addClass('cur')
+        $(this).siblings().children('a').removeClass('cur')
+        $('.cur_line').css('left', $(this).position().left).width($(this).width())
+        $('.help_item').eq($(this).index()).slideDown().siblings().slideUp()
+      })
+    </script>
+    <!--  常见问题-->
+    <script>
+      $('.qa_list li').on('click', function() {
+        $(this).addClass('cur').siblings().removeClass('cur')
+        if ($(this).children('.answer').css('display') === 'none') {
+          // 隐藏其他
+          $(this).siblings().children('.answer').slideUp().children('span').slideUp('fast')
+          // 打开自己
+          $(this).children('.answer').slideDown('fast').children('span').slideDown()
+        } else {
+          // 隐藏自己
+          $(this).children('.answer').slideUp().children('span').slideUp('fast')
+        }
+      })
+    </script>
+  </body>
+</html>

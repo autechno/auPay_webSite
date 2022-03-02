@@ -1,0 +1,254 @@
+/*  左侧导航*/
+.product_w {
+  padding-top: 20px;
+  background-color: #f6f8f9;
+  /* overflow: hidden; */
+  width: 100%;
+}
+.product_w .w {
+  font-size: 0;
+}
+.explain_nav {
+  position: fixed;
+  position: sticky;
+  top: 95px;
+  display: inline-block;
+  width: 200px;
+  background-color: white;
+  color: #333;
+  padding: 30px 20px;
+}
+.max_tit {
+  font-size: 0;
+  margin-bottom: 20px;
+}
+.max_tit i {
+  width: 4px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: #3363d0;
+  border-radius: 10px;
+}
+.max_tit a {
+  vertical-align: middle;
+  margin-left: 10px;
+  font-size: 18px;
+  font-family: PingFangSC-Medium, MicrosoftYaHei-Bold;
+}
+.min_nav {
+  font-size: 16px;
+  padding-left: 14px;
+}
+.min_nav li {
+  margin-bottom: 20px;
+  color: #333;
+}
+.min_nav li:hover {
+  color: #3363d0;
+}
+/*  内容*/
+.explain_info {
+  font-family: PingFangSC-Medium, MicrosoftYaHei-Bold;
+  padding: 30px;
+  float: right;
+  width: calc(100% - 220px);
+  background-color: white;
+}
+.explain_info_item {
+  color: #333;
+  border-bottom: 1px dashed #e6e6e6;
+  padding-bottom: 25px;
+}
+.explain_info_tit {
+  padding-top: 20px;
+  line-height: 100%;
+  font-size: 18px;
+  margin-bottom: 20px;
+  font-family: PingFangSC-Medium, MicrosoftYaHei-Bold;
+}
+.explain_info_des {
+  font-size: 16px;
+  line-height: 180%;
+}
+.explain_info_li_tit {
+  font-size: 0;
+  margin-bottom: 15px;
+}
+.explain_info_li_tit i {
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #3363d0;
+  display: inline-block;
+}
+.explain_info_li_tit span {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: 5px;
+}
+.explain_info_li_info {
+  font-size: 15px;
+  padding-left: 11px;
+  margin-bottom: 15px;
+}
+.explain_info_li_info li {
+  /* margin-bottom: 15px; */
+  line-height: 200%;
+}
+.explain_info_img {
+  width: 100%;
+}
+.min_text {
+  padding-left: 1em;
+}
+.min_bold_text {
+  padding-left: 1em;
+  font-weight: 600;
+}
+/*  api详情*/
+.api_info {
+  padding: 15px;
+  background-color: #f4f4f4;
+}
+.api_info p {
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.api_info i {
+  color: #3363d0;
+}
+.explain_red {
+  color: #f80f0f;
+}
+
+/*  移动*/
+@media(max-width: 768px) {
+  .explain_nav {
+    position: initial;
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+  }
+  .min_nav li {
+    display: inline-block;
+  }
+  .explain_info {
+    float: initial;
+    width: 100%;
+    padding: 15px;
+  }
+  .max_tit {
+    margin-bottom: 2%;
+  }
+  .max_tit a {
+    margin-left: 5px;
+    font-size: 16px;
+  }
+  .min_nav {
+    font-size: 14px;
+    padding-left: 10px;
+  }
+  .min_nav li {
+    margin-bottom: 2%;
+  }
+  .explain_info_tit {
+    padding-top: 2%;
+    font-size: 16px;
+    margin-bottom: 2%;
+  }
+  .explain_info_des {
+    font-size: 14px;
+  }
+  .explain_info_item {
+    padding-bottom: 2%;
+  }
+  .explain_info_li_tit {
+    font-size: 0;
+    margin-bottom: 1%;
+  }
+  .explain_info_li_tit span {
+    font-size: 14px;
+    margin-left: 5px;
+  }
+  .explain_info_li_info {
+    font-size: 12px;
+    padding-left: 10px;
+    margin-bottom: 2%;
+  }
+}
+
+.explain_table {
+  border-collapse: collapse;
+  width: 100%;
+  border-color: #e6e6e6;
+  margin: 10px 0;
+}
+.explain_table th {
+  padding: 0 10px;
+  background-color: #f4f4f4;
+}
+.explain_table td {
+  padding: 5px 10px;
+  color: #666;
+}
+@media(max-width: 480px) {
+  .explain_table th, .explain_table td {
+    padding: 0 5px;
+    text-align: center;
+  }
+}
+
+.product_w {
+  position: relative;
+  z-index: 2;
+}
+.public_footer {
+  position: relative;
+  z-index: 1;
+  background: #f6f8f9;
+  margin-top: 0;
+}
+@media (max-width: 1700px) {
+  .footer_bg img {
+    min-height: 430px;
+  }
+}
+@media (max-width: 1500px) {
+  .footer_bg img {
+    object-fit: contain;
+  }
+}
+@media (max-width: 1300px) {
+  .footer_bg img {
+    margin-top: -2%;
+  }
+}
+@media (max-width: 1200px) {
+  .footer_bg img {
+    margin-top: -3%;
+  }
+}
+@media (max-width: 996px) {
+  .footer_bg img {
+    margin-top: -6%;
+  }
+}
+@media (max-width: 900px) {
+  .footer_bg img {
+    margin-top: -8%;
+  }
+}
+@media (max-width: 768px) {
+  .public_footer {
+    padding-top: 3%;
+  }
+  .footer_bg img {
+    margin-top: 0%;
+    min-height: auto;
+    object-fit: fill;
+  }
+}
+/* margin-top: -5%; */

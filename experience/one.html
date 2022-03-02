@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>支付体验_auPay</title>
+  <meta name="description" content="专注为商业客户提供解决区块链数字资产快捷支付服务，实现对多币种的充值入金渠道，节省商户平台的开发和维护成本">
+  <link rel="shortcut icon" href="../static/website/images/experience/favicon.ico">
+
+  <!--  公-->
+  <link rel="stylesheet" href="../static/website/css/experience/common.css">
+  <link rel="stylesheet" href="../static/website/css/experience/jui.css">
+  <link rel="stylesheet" href="../static/website/css/experience/jquery.mobile.css">
+  
+  <!--  私-->
+  <link rel="stylesheet" href="../static/website/css/experience/index.css">
+  <link rel="stylesheet" href="../static/website/css/experience/auToken.css">
+  <!-- <link rel="stylesheet" href="../static/website/css/experience/nSelect.css"> -->
+</head>
+<body>
+  <div class="warp_bg" data-role="page" style="background-image: url('../static/website/images/experience/commonBg.png');">
+    <h1 class="logo">
+      <div class="w">
+        <img src="../static/website/images/experience/logo.png" alt="">
+      </div>
+    </h1>
+    <div class="w">
+      <!--  按钮操作-->
+      <div class="view_btn">
+        <a href="https://www.auPay.one/helper" data-role='none' target="_blank">查看充币引导</a>
+      </div>
+      <!--  表单-->
+      <form class="form_w">
+        <div class="form_i">
+          <p class="form_i_p">充值金额：</p>
+          <div class="form_i_info form_i_input">
+            <span id="depositMoney" class="form_i_input_num">0</span>
+            <span class="form_i_input_unit">CNY</span>
+          </div>
+        </div>
+        <div class="form_i form_i_select" style="margin: 0;">
+          <p class="form_i_p">支付币种：</p>
+          <div class="form_i_info">
+            <ul class="n_option">
+              <li class='coin_i' data-rate="6.3"><img class='n_option_img' src="../static/website/images/experience/OMNI.png">USDT-OMNI</li>
+              <li class='coin_i' data-rate="6.3"><img class='n_option_img' src="../static/website/images/experience/ERC20.png">USDT-ERC20</li>
+              <li class='coin_i' data-rate="6.3"><img class='n_option_img' src="../static/website/images/experience/TRC20.png">USDT-TRC20</li>
+              <li class='coin_i' data-rate="333333"><img class='n_option_img' src="../static/website/images/experience/BTC.png">BTC</li>
+              <li class='coin_i' data-rate="27027"><img class='n_option_img' src="../static/website/images/experience/ETH.png">ETH</li>
+              <li class='coin_i' data-rate="1259"><img class='n_option_img' src="../static/website/images/experience/LTC.png">LTC</li>
+              <li class='coin_i' data-rate="620"><img class='n_option_img' src="../static/website/images/experience/BCH.png">BCH</li>
+            </ul>
+          </div>
+          <span class="error_prompt">请选择币种</span>
+        </div>
+        <p id="currencyRate" class="form_tip"></p>
+        <div class="form_i" style="margin: 0;">
+          <p class="form_i_p">支付数量：</p>
+          <div class="form_i_info form_i_input">
+            <span id="payNum" class="form_i_input_num">0</span>
+          </div>
+        </div>
+        <p class="form_tip">该汇率为演示汇率，真实汇率请以实际充值订单为准</p>
+        <div class="common_btns">
+          <button type="button" class="common_button nextStep" data-role='none'>立即支付</button>
+          <a class="view_helper" href="https://www.auPay.one/helper" data-role='none' target="_blank">查看充币引导</a>
+        </div>
+      </form>
+    </div>
+    <p class="copyright">auPay.one | Copyright © 2019-2021 All Rights Reserved</p>
+
+    <!--  支付数量注释-->
+    <div data-role="popup" id="popupInfo" class="ui-content" data-theme="a">
+      <p>根据多个交易所当前汇率得出，因数字货币波动强烈，请以实际支付数量为准</p>
+    </div>
+
+    <!--   文字提示弹窗-->
+    <div id="res_message" data-role="popup" data-history="false">
+      <p id="res_message_info"></p>
+    </div>
+  </div>
+  <!--  公-->
+  <script src="../static/website/js/experience/jquery.js"></script>
+  <script src="../static/website/js/experience/jquery.mobile.js"></script>
+  <script>
+    var ifAutoMatch = '[[${autoMatch}]]'
+    if (ifAutoMatch === '1') {
+      $('.view_btn a').hide()
+    }
+    var paymentOrderId = '88888888888888888'
+    var depositMoney = 888 // 充值金额
+    
+  </script>
+  <script src="../static/website/js/experience/index.js"></script>
+</body>
+</html>

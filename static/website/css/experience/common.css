@@ -1,0 +1,459 @@
+/*  公用*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-shadow: none;
+}
+html {
+  background: white;
+}
+ul, li {
+  list-style: none;
+}
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+i {
+  font-style: inherit;
+}
+button {
+  outline: none;
+}
+input {
+  outline: none;
+}
+input[type=number] {
+  -moz-appearance:textfield;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input::-webkit-input-placeholder { 
+  color: #aaa; 
+} 
+input:-moz-placeholder { 
+  color: #aaa; 
+} 
+input::-moz-placeholder { 
+  color: #aaa; 
+} 
+input:-ms-input-placeholder { 
+  color: #aaa; 
+}
+
+.w {
+  max-width: 840px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+.w .form_w {
+  background: white;
+  box-shadow: 0px 0px 13px 10px rgba(0, 0, 0, 0.04);
+  padding: 60px 110px 105px;
+}
+
+.common_head {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  /* margin: 6% 0; */
+  margin-bottom: 20px;
+  position: relative;
+}
+.common_head i {
+  width: 15px;
+  height: 15px;
+  border: 3px solid;
+  display: block;
+  transform: rotateZ(45deg);
+  border-color: transparent transparent #000 #000;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -7.5px;
+}
+.common_head img {
+  width: 66px;
+}
+.common_head p {
+  font-size: 24px;
+  font-family: PingFangSC-Regular,PingFang SC;
+  font-weight: 400;
+  color: rgba(51,51,51,1);
+  margin-top: 15px;
+}
+
+.common_blue {
+  color: #3363D0 !important;
+}
+.common_blue_bg {
+  background-color: #3363D0 !important;
+}
+.common_btns {
+  text-align: center;
+  font-size: 0;
+}
+.common_button {
+  width: 235px;
+  height: 44px;
+  background: #3363D0;
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  color: #FFF;
+  line-height: 20px;
+  border: 1px solid #3363D0;
+  cursor: pointer;
+}
+
+.common_bg {
+  background: #eee;
+  width: 100%;
+  border-radius: 15px;
+}
+
+.warp_bg {
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-bottom: 200px !important;
+  padding-bottom: 110px !important;
+  min-height: 100vh !important;
+}
+/* .warp_bg_info {
+  margin: 0 auto;
+} */
+.logo {
+  height: 80px;
+  border-bottom: 1px solid #4F81F3;
+}
+.logo .w {
+  background: transparent;
+}
+.logo img {
+  width: 130px;
+  margin-top: 20px;
+}
+/*  顶部按钮的引导*/
+.view_btn {
+  background: transparent;
+  margin: 20px 0;
+  /* padding: 30px 0; */
+  text-align: right;
+}
+.view_btn span, .view_btn a {
+  padding: 0 20px;
+  height: 36px;
+  line-height: 36px;
+  display: inline-block;
+  background: rgba(255, 255, 255, .19);
+  border-radius: 18px;
+  font-size: 16px;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  color: white !important;
+  cursor: pointer;
+  font-weight: 400 !important;
+}
+.copyright {
+  font-size: 16px;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  color: #D6D6D6;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  background: #4D76D4;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.help {
+  display: block;
+  margin-bottom: 10px;
+}
+.help img {
+  border-radius: 50%;
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+}
+.help span {
+  vertical-align: middle;
+  border-bottom: 2px solid white;
+  font-weight: 400;
+}
+
+@media (max-width: 840px) {
+  .w {
+    padding: 0 15px;
+  }
+  .w .form_w {
+    padding: 8% 15% 10%;
+  }
+  .logo {
+    height: 65px;
+  }
+  .logo img {
+    margin-top: 8px;
+  }
+  .view_btn {
+    margin: 2% 0;
+    /* padding: 4% 0; */
+  }
+  .view_btn span, .view_btn a {
+    font-size: 14px;
+    padding: 0 16px;
+  }
+  .n_option .coin_i {
+    width: 31%;
+    font-size: 12px;
+    margin: 0 3.5% 2% 0;
+  }
+  .copyright {
+    height: 80px;
+    line-height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .w .form_w {
+    padding: 7% 5%;
+  }
+  .logo .w {
+    text-align: center;
+  }
+  .view_btn span, .view_btn a {
+    font-size: 12px;
+    padding: 0 15px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .copyright {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .view_btn {
+    display: none;
+  }
+  .logo {
+    border: none;
+    height: 62px !important;
+  }
+  .logo .w {
+    height: 100%;
+  }
+  .logo .w img {
+    margin-top: 15px;
+    width: 91px;
+  }
+  .w .form_w {
+    padding: 20px 15px;
+  }
+  .warp_bg {
+    padding-bottom: 100px !important;
+  }
+}
+
+
+
+/*  弹窗*/
+
+.hint_pop {
+  width: 410px;
+  text-align: center;
+  margin: 0 auto;
+  box-shadow: none !important;
+  background: #FFFFFF;
+  border-radius: 4px;
+  padding-top: 20px;
+}
+.hint_pop_tit {
+  padding: 0 20px;
+  font-size: 0;
+  text-align: left;
+}
+.hint_pop_tit_txt {
+  font-size: 0;
+  text-align: left;
+  display: inline-block;
+}
+.hint_pop_tit_txt_icon {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  text-align: center;
+  background: rgba(249, 98, 47, .1);
+  vertical-align: middle;
+}
+.hint_pop_tit_txt_icon img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.hint_pop_tit_txt span {
+  vertical-align: middle;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #666666;
+  margin-left: 10px;
+}
+.hint_pop_close {
+  float: right;
+  cursor: pointer;
+}
+.hint_pop_p {
+  padding: 0 20px;
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  color: #748AA7;
+  line-height: 24px;
+  text-align: left;
+  margin: 30px 0 30px 45px !important;
+}
+.hint_pop_foo {
+  width: 100%;
+  padding: 12px 20px;
+  background: #F2F5F6;
+  border-radius: 0px 0px 4px 4px;
+  text-align: right;
+  font-size: 0;
+}
+.hint_pop_foo a {
+  margin-left: 10px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  width: 76px;
+  height: 30px;
+  line-height: 30px;
+  background: #D6D6D6;
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400 !important;
+  color: #FFF !important;
+}
+.hint_pop_foo a:nth-child(2) {
+  background: #3363D0;
+}
+
+@media (max-width: 460px) {
+  #popupContinuePop-popup {
+    width: 100%
+  }
+  .hint_pop {
+    width: 100%;
+  }
+  .hint_pop_p {
+    margin: 6% 0 !important;
+    text-align: center;
+  }
+}
+
+#loadTip .l_t_ul {
+  text-align: left;
+}
+.l_t_focus {
+  font-size: 18px;
+  color: #FA6400;
+}
+.order_timeout {
+  display: none;
+  line-height: 100px;
+  font-size: 24px;
+  font-family: PingFang-SC-Medium,PingFang-SC;
+  font-weight: 500;
+  color: rgba(51,51,51,1);
+}
+@media(max-width: 510px) {
+  #loadTip .l_t_ul li {
+    font-size: 12px;
+  }
+  .l_t_focus {
+    font-size: 16px;
+  }
+}
+.loading_w {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.loading_empty_w {
+  background-color: white;
+}
+
+.loading{
+  width: 80px;
+  width: 115px;
+  text-align: center;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.loading_p {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #d6d6d6 ;
+  text-shadow: none;
+}
+.loading_empty_p {
+  color: #333;
+}
+.loading span{
+  display: inline-block;
+  width: 8px;
+  height: 100%;
+  border-radius: 4px;
+  background: #3363D0;
+  -webkit-animation: load 1s ease infinite;
+}
+@-webkit-keyframes load{
+  0%,100%{
+      height: 40px;
+      margin: 0px 4px;
+      background: #3363D0 ;
+  }
+  50%{
+      height: 70px;
+      margin: -15px 4px;
+      background: #5B91FF;
+  }
+}
+.loading span:nth-child(2){
+  -webkit-animation-delay:0.2s;
+}
+.loading span:nth-child(3){
+  -webkit-animation-delay:0.4s;
+}
+.loading span:nth-child(4){
+  -webkit-animation-delay:0.6s;
+}
+.loading span:nth-child(5){
+  -webkit-animation-delay:0.8s;
+}
+
+
+.pc_show { display: inline-block; }
+.mobile_show { display: none !important; }
+@media (max-width: 480px) {
+  .pc_show { display: none !important; }
+  .mobile_show { display: inline-block !important; }
+}

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>开户申请_auPay</title>
+  <meta name="description" content="专注为商业客户提供解决区块链数字资产快捷支付服务，实现对多币种的充值入金渠道，节省商户平台的开发和维护成本">
+  <link rel="shortcut icon" href="./static/website/images/favicon1.png">
+  <link rel="stylesheet" href="./static/website/css/public.css">
+  <link rel="stylesheet" href="./static/website/css/apply.css">
+</head>
+<body>
+  <div class="apply_w">
+    <div class="apply_tit">
+      <div onclick="location.href = '/'" class="apply_logo"><img src="./static/website/images/logo3.png" alt=""></div>
+      <i></i>
+      <h2>开户申请</h2>
+    </div>
+    <div class="apply_form">
+      <div class="apply_item">
+        <div class="apply_item_icon"><img src="./static/website/images/apply/icon1.png" alt=""></div>
+        <input id="merchantName" type="text" placeholder="请输入1-12位商户名称">
+        <p class="input_error">请正确输入商户名称(仅支持数字、字母、下划线)</p>
+      </div>
+      <div class="apply_item">
+        <div class="apply_item_icon"><img src="./static/website/images/apply/icon2.png" alt=""></div>
+        <div class="sele_area">
+          <p id="areaKey">+86</p>
+          <ul class="area_list"></ul>
+        </div>
+        <input id="tel" type="number" placeholder="请输入手机号码">
+        <p class="input_error input_error_area">请正确输入手机区号</p>
+        <p class="input_error input_error_tel">请正确输入手机号码</p>
+      </div>
+      <div class="apply_item">
+        <div class="apply_item_icon"><img src="./static/website/images/apply/icon3.png" alt=""></div>
+        <input id="merchantEmail" type="email" placeholder="请输入邮箱">
+        <p class="input_error">请正确输入邮箱</p>
+      </div>
+      <div class="apply_item">
+        <div class="apply_item_icon"><img src="./static/website/images/apply/icon4.png" alt=""></div>
+        <input id="merchantPlatformSite" type="text" placeholder="请输入平台网址">
+        <p class="input_error">请正确输入平台网址</p>
+      </div>
+      <div class="apply_item">
+        <div class="apply_item_icon"><img src="./static/website/images/apply/icon6.png" alt=""></div>
+        <input id="skype" type="text" placeholder="请输入Skype">
+        <p class="input_error">请正确输入Skype</p>
+      </div>
+      <div class="apply_item">
+        <div class="apply_item_icon"><img src="./static/website/images/apply/icon5.png" alt=""></div>
+        <input id="telegram" type="text" placeholder="请输入telegram">
+      </div>
+      <div class="apply_item">
+        <div class="apply_item_icon"><img src="./static/website/images/apply/icon7.png" alt=""></div>
+        <input id="qq" type="text" placeholder="请输入QQ">
+      </div>
+      <div class="apply_item apply_item_textarea">
+        <div class="apply_item_icon"><img src="./static/website/images/apply/icon8.png" alt=""></div>
+        <textarea id="note" placeholder="附加信息" style="resize: none;" ></textarea>
+      </div>
+      <div class="apply_item apply_item_radio">
+        <input id="pact" type="radio">
+        <p>已阅读并同意<a target="_black" href="./static/website/pdf/agreement.pdf">《合作协议》</a></p>
+      </div>
+      <button id="submit" class="submit">提交申请</button>
+    </div>
+  </div>
+  <script src="./static/website/js/jquery.js"></script>
+  <script>
+    // 区号 start
+    var areaList = [
+      { key: '86', value: '中国(+86)' },
+      { key: '852', value: '香港地区(+852)' },
+      { key: '853', value: '澳门(+853)' },
+      { key: '886', value: '台湾地区(+886)' },
+      { key: '63', value: '菲律宾(+63)' },
+      { key: '81', value: '日本(+81)' },
+      { key: '82', value: '韩国(+82)' },
+      { key: '65', value: '新加坡(+65)' },
+      { key: '66', value: '泰国(+66)' },
+      { key: '60', value: '马来西亚(+60)' },
+      { key: '1', value: '美国/加拿大(+1)' },
+      { key: '61', value: '澳大利亚(+61)' },
+      { key: '44', value: '英国(+44)' },
+      { key: '49', value: '德国(+49)' },
+      { key: '7', value: '俄罗斯(+7)' },
+      { key: '33', value: '法国(+33)' },
+      { key: '91', value: '印度(+91)' },
+      { key: '64', value: '新西兰(+64)' },
+      { key: '39', value: '意大利(+39)' },
+      { key: '31', value: '荷兰(+31)' },
+      { key: '34', value: '西班牙(+34)' },
+      { key: '46', value: '瑞典(+46)' },
+      { key: '43', value: '奥地利(+43)' },
+      { key: '41', value: '瑞士(+41)' },
+      { key: '370', value: '立陶宛(+370)' },
+      { key: '62', value: '印度尼西亚(+62)' },
+      { key: '84', value: '越南(+84)' },
+      { key: '971', value: '阿联酋(+971)' }
+    ]
+    var tempUl = ''
+    for (var i = 0; i< areaList.length; i++) {
+      var item = areaList[i]
+      tempUl += `<li class="area_item" data-key="${item.key}">${ item.value }</li>`
+    }
+    $('.area_list').html(tempUl)
+    $('#areaKey').click(function(e) {
+      $('.area_list').fadeIn()
+      stopFunc(e)
+    })
+    $('.area_item').click(function() {
+      $('#areaKey').html('+' + $(this).attr('data-key'))
+      $('.area_list').fadeOut()
+    })
+    $(document).click(function() {
+      $('.area_list').fadeOut() 
+    })
+    function stopFunc(e) {
+      e.stopPropagation ? e.stopPropagation() : e.cancelBubble = true;
+    }
+    // 区号 end
+
+    $('#submit').click(function() {
+      // 条约
+      if (!$("input[type='radio']:checked").val()) {
+        alert('请阅读并勾选合作协议')
+        return
+      }
+      var nameVal = /^[a-zA-Z0-9_]{1,}$/g;
+      var emailReg = /^[a-zA-Z0-9_.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.[a-zA-Z0-9]{2,6}$/;
+      var telVal = /^[0-9]+$/;
+      // 用户名
+      var merchantName = $('#merchantName')
+      if (!nameVal.test(merchantName.val()) || !merchantName.val()) return merchantName.siblings('.input_error').show()
+      merchantName.siblings('.input_error').hide()
+      if (merchantName.val().length >= 1 && merchantName.val().length <= 12) {
+        merchantName.siblings('.input_error').hide()
+      } else {
+        merchantName.siblings('.input_error').show()
+      }
+      // 区号
+      var areaKey = $('#areaKey');
+      if (!areaKey.html()) areaKey.siblings('.input_error_area').show()
+      areaKey.siblings('.input_error_area').hide()
+      // 手机号
+      var tel = $('#tel')
+      if (!telVal.test(tel.val()) || !tel.val()) return tel.siblings('.input_error_tel').show()
+      tel.siblings('.input_error_tel').hide()
+      // 邮箱
+      var merchantEmail = $('#merchantEmail')
+      if (!emailReg.test(merchantEmail.val()) || !merchantEmail.val()) return merchantEmail.siblings('.input_error').show()
+      merchantEmail.siblings('.input_error').hide()
+      // 平台网址
+      var merchantPlatformSite = $('#merchantPlatformSite')
+      if (!merchantPlatformSite.val()) return merchantPlatformSite.siblings('.input_error').show()
+      merchantPlatformSite.siblings('.input_error').hide()
+      // skype
+      var skype = $('#skype')
+      if (!skype.val()) return skype.siblings('.input_error').show()
+      skype.siblings('.input_error').hide()
+      
+      var sendData = {
+        merchantName: $('#merchantName').val(),
+        merchantPhoneNo: $('#areaKey').html() + ' ' + $('#tel').val(),
+        merchantEmail: $('#merchantEmail').val(),
+        merchantPlatformSite: $('#merchantPlatformSite').val(),
+        skype: $('#skype').val(),
+        telegram: $('#telegram').val(),
+        qq: $('#telegram').val(),
+        note: $('#note').val()
+      }
+      sendData.merchantPhoneNo = sendData.merchantPhoneNo.replace('+', '')
+      var url = 'https://aupay.one/api/merchant/register';
+      $.ajax({
+        url: url,
+        type: 'post',
+        data: JSON.stringify(sendData),
+        contentType: 'application/json; charset=utf-8',
+        success: function(res) {
+          if (res && res.code === 200) {
+            alert('恭喜您, 注册成功, 请等待审核')
+            location.href='/'
+          } else {
+            alert(res.message || '注册失败')
+          }
+        }
+      })
+    })
+  </script>
+</body>
+</html>

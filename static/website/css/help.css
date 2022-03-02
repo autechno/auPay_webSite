@@ -1,0 +1,300 @@
+.help_w {
+  width: 1200px;
+  margin: 0 auto;
+}
+.help_logo {
+  margin: 20px 0;
+}
+.help_logo img {
+  width: 230px;
+  height: auto;
+}
+.help_wrap {
+  padding: 30px 0;
+  background-color: white;
+}
+.warp_bg {
+  background-color: #F8F8F8;
+  padding: 30px 0;
+}
+.help_title {
+  padding: 0 30px;
+  margin-bottom: 22px;
+}
+.help_title i {
+  display: inline-block;
+  width:5px;
+  height:25px;
+  border-radius: 10px;
+  background:rgba(77,136,255,1);
+  vertical-align: middle;
+}
+.help_title p {
+  margin-left: 6px;
+  display: inline-block;
+  font-size: 20px;
+  font-family: PingFangSC-Medium,PingFang SC;
+  font-weight: 500;
+  color: rgba(51,51,51,1);
+  vertical-align: middle;
+}
+
+.help_nav {
+  font-size: 0;
+  border-bottom: 1px solid #E6E6E6;
+  padding: 0 47px 10px;
+}
+.help_nav li {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 16px;
+  font-family: PingFang-SC-Medium,PingFang-SC;
+  font-weight: 500;
+  color: rgba(153,153,153,1);
+  margin-right: 40px;
+}
+.help_nav li:nth-last-child(1) {
+  margin-right: 0;
+}
+.help_nav li a {
+  padding-bottom: 8px;
+  font-weight: initial;
+}
+.help_nav li .cur {
+  color: rgba(51,51,51,1) !important;
+  /* border-bottom: 2px solid #4D88FF; */
+}
+/* .help_nav li:hover a {
+  color: rgba(51,51,51,1) !important;
+  border-bottom: 2px solid #4D88FF;
+} */
+.help_copyright {
+  margin: 30px 0 70px;
+  font-size: 16px;
+  text-align: center;
+  color: #999;
+  font-family:PingFang-SC-Medium,PingFang-SC;
+  font-weight: 500;
+}
+.help_nav {
+  position: relative;
+}
+.cur_line {
+  transition: all .5s ease;
+  position: absolute;
+  height: 2px;
+  background-color: #4D88FF;
+  bottom: 0;
+}
+.help_item:nth-child(n+2) {
+  display: none;
+}
+@media(max-width: 1200px) {
+  .help_w {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+@media(max-width: 768px) {
+  .help_title {
+    padding: 0 15px;
+    margin-bottom: 17px;
+  } 
+  .help_title p {
+    margin-left: 5px;
+    font-size: 16px;
+  }
+  .help_nav li {
+    font-size: 14px;
+    margin-right: 32px;
+  }
+  .help_nav li a {
+    padding-bottom: 6px;
+  }
+  .help_nav {
+    padding: 0 30px 8px;
+  }
+  .help_copyright {
+    margin: 5% 0;
+    font-size: 14px;
+  }
+}
+@media(max-width: 480px) {
+  .help_logo {
+    margin: 3% auto;
+    text-align: center;
+  }
+  .help_logo img {
+    width: 150px;
+  }
+  .help_wrap {
+    padding: 5% 0;
+  }
+  .help_title {
+    margin-bottom: 5%;
+  } 
+  .help_title p {
+    margin-left: 3px;
+    font-size: 14px;
+  }
+  .help_nav li {
+    font-size: 12px;
+    margin-right: 25px;
+  }
+  .help_nav li a {
+    padding-bottom: 3px;
+  }
+  .help_nav {
+    padding: 0 15px 5px;
+  }
+  .help_copyright {
+    font-size: 12px;
+  }
+}
+@media(max-width: 350px) {
+  .help_nav {
+    border: none;
+  }
+  .help_nav li {
+    display: block;
+    margin-bottom: 5%;
+  }
+  .cur_line {
+    display: none !important;
+  }
+}
+
+
+
+/*  常见问题*/
+.qa {
+  font-family: PingFangSC-Medium,PingFang SC;
+  padding: 0 47px;
+}
+.qa_tit {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 20px 0;
+  font-family:PingFangSC-Medium,PingFang SC;
+}
+.qa_tit_line {
+  border-top: 1px dashed #E6E6E6;
+  padding-top: 20px;
+}
+.qa_list>li {
+  margin-bottom: 20px;
+}
+.qa_list>li.cur .problem {
+  color: #4D88FF;
+}
+.problem {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  font-family:PingFang-SC-Medium,PingFang-SC;
+  cursor: pointer;
+}
+.answer {
+  display: none;
+  overflow: initial !important;
+  position: relative;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(51,51,51,1);
+  background-color: #E5EDFF;
+  padding: 15px 22px;
+  margin-top: 16px;
+  border-radius: 10px;
+  line-height: 150%;
+}
+.answer .triangle {
+  position: absolute;
+  top: -12px;
+  border: 6px solid;
+  display: block;
+  border-color: transparent transparent #E5EDFF transparent;
+}
+@media(max-width: 768px) {
+  .qa {
+    padding: 0 30px;
+  }
+  .qa_tit {
+    font-size: 14px;
+    margin: 3% 0;
+  }
+  .qa_tit_line {
+    margin-top: 3%;
+  }
+  .problem {
+    font-size: 12px;
+  }
+  .answer {
+    font-size: 12px;
+    padding: 2%;
+    margin-top: 10px;
+  }
+}
+@media(max-width: 480px) {
+  .qa {
+    padding: 0 15px;
+  }
+  .qa_tit {
+    font-size: 13px;
+  }
+  .answer .triangle {
+    left: 10px;
+  }
+}
+
+/*  钱包充币流程*/
+.blue_color {
+  color: #4D88FF;
+}
+.red_color {
+  color: #F80F0F;
+}
+.wallet {
+  padding: 0 47px;
+  margin-top: 20px;
+}
+.process_list li {
+  margin-bottom: 18px;
+}
+.process_list li p {
+  font-size: 14px;
+  font-family: PingFang-SC-Medium,PingFang-SC;
+  font-weight: 500;
+  color: rgba(51,51,51,1);
+  margin-bottom: 10px;
+}
+.process_img img {
+  width: auto;
+  height: 324px;
+}
+
+@media(max-width: 768px) {
+  .wallet {
+    padding: 0 30px;
+    margin-top: 3%;
+  }
+  .process_list li p {
+    font-size: 12px;
+    line-height: 150%;
+  }
+}
+@media(max-width: 480px) {
+  .wallet {
+    padding: 0 15px;
+    margin-top: 3%;
+  }
+  .process_img img {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  .process_img img.max_img {
+    width: 100%;
+  }
+}

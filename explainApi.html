@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>联系我们_auPay</title>
+  <meta name="description" content="专注为商业客户提供解决区块链数字资产快捷支付服务，实现对多币种的充值入金渠道，节省商户平台的开发和维护成本">
+  <link rel="shortcut icon" href="./static/website/images/favicon1.png">
+  <link rel="stylesheet" href="./static/website/css/public.css">
+  <link rel="stylesheet" href="./static/website/css/explain.css">
+</head>
+<body>
+  <!-- pc Navigation and Banner start-->
+  <div class="nav_banner">
+    <div class="banner_right_bg"><img src="./static/website/images/bannerRight.png" alt=""></div>
+    <div class="nav_wrap w">
+      <div class="banner_earth"><img src="./static/website/images/earth.gif" alt=""></div>
+      <h1 onclick="location.href = '/'" class="logo"><img src="./static/website/images/logo.png" alt=""></h1>
+      <ul class="nav_list">
+        <li><a href="/">官网首页</a></li>
+        <li>·</li>
+        <li><a href="./account.html">商户接入</a></li>
+        <li>·</li>
+        <li><a href="./advantage.html">产品优势</a></li>
+        <li>·</li>
+        <li class="cur"><a href="./explainProduct.html">产品说明</a></li>
+        <li>·</li>
+        <li><a href="./contact.html">联系我们</a></li>
+      </ul>
+    </div>
+    <div class="w banner_content_w">
+      <div class="banner_content">
+        <h2>产品说明</h2>
+        
+      </div>
+    </div>
+  </div>
+  <!-- pc Navigation and Banner end-->
+  <!-- mobile Navigation start-->
+  <div class="mobile_nav">
+    <div class="top">
+      <div class="menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <a href="/" class="mobile_logo">
+        <img src="./static/website/images/logo2.png" alt="">
+      </a>
+    </div>
+    <div class="menu_info">
+      <ul class="menu_info_list">
+        <li><a href="/">官网首页</a></li>
+        <li><a href="./account.html">商户接入</a></li>
+        <li><a href="./advantage.html">产品优势</a></li>
+        <li class="cur"><a href="./explainProduct.html">产品说明</a></li>
+        <li><a href="./contact.html">联系我们</a></li>
+      </ul>
+    </div>
+    <div class="menu_info_bg"></div>
+  </div>
+  <!-- mobile Navigation end-->
+  <!--  mobile Banner start-->
+  <div class="mobile_banner">
+    <h2>产品说明</h2>
+    
+    <div class="banner_earth"><img src="./static/website/images/earth.gif" alt=""></div>
+  </div>
+  <!--  mobile Banner end-->
+
+  <!--  产品简介-->
+  <div class="product_w">
+    <div class="w clearfix">
+      <!--  简介导航-->
+      <ul class="explain_nav">
+        <li class="explain_i">
+          <div class="max_tit">
+            <i></i>
+            <a href="./explainProduct.html">产品说明</a>
+          </div>
+          <ul class="min_nav">
+            <li class="cur"><a href="./explainProduct.html#productInfo">产品简介</a></li>
+            <li><a href="./explainProduct.html#productAdvantage">产品优势</a></li>
+            <li><a href="./explainProduct.html#productFramework">产品架构</a></li>
+            <li><a href="./explainProduct.html#productUse">应用场景</a></li>
+            <li><a href="./explainProduct.html#productConcept">基本概念</a></li>
+          </ul>
+        </li>
+        <li class="explain_i">
+          <div class="max_tit">
+            <i></i>
+            <a href="./explainMerchants.html">商户系统</a>
+          </div>
+          <ul class="min_nav">
+            <li><a href="./explainMerchants.html#MerchantsInfo">简介</a></li>
+            <li><a href="./explainMerchants.html#MerchantsConstitute">组成</a></li>
+            <li><a href="./explainMerchants.html#MerchantsModule">模块介绍</a></li>
+          </ul>
+        </li>
+        <li class="explain_i">
+          <div class="max_tit">
+            <i></i>
+            <a href="./explainApi.html">支付开放接口说明</a>
+          </div>
+          <ul class="min_nav">
+            <li><a href="./explainApi.html#explainDocument">文档说明</a></li>
+            <li><a href="./explainApi.html#explainApi">接口说明</a></li>
+            <li><a href="./explainApi.html#explainCode">错误码说明</a></li>
+          </ul>
+        </li>
+      </ul>
+      <!--  简介内容-->
+      <ul class="explain_info">
+        <li id="explainDocument" class="explain_info_item">
+          <p class="explain_info_tit">文档说明</p>
+          <ul class="explain_info_ul">
+            <li class="explain_info_li">
+              <div class="explain_info_li_tit"><i></i><span>背景</span></div>
+              <ul class="explain_info_li_info">
+                <li>为了方便本系统人员开发和其它系统调用本系统业务接口，编制了本接口文档。</li>
+              </ul>
+            </li>
+            <li class="explain_info_li">
+              <div class="explain_info_li_tit"><i></i><span>接口规范使用说明</span></div>
+              <ul class="explain_info_li_info">
+                <li>本文档为auPay平台为外部系统调用本系统提供的标准接口文档，详细说明和约束了各个接口的参数和返回值。阅读对象为需要调用本支付接口的开发人员。</li>
+              </ul>
+            </li>
+            <li class="explain_info_li">
+              <div class="explain_info_li_tit"><i></i><span>术语解释</span></div>
+              <ul class="explain_info_li_info">
+                <li>
+                  <table class="explain_table" border="1" cellspacing=0>
+                    <tr>
+                      <th>术语</th>
+                      <th>英文</th>
+                      <th>定义</th>
+                    </tr>
+                    <tr>
+                      <td>合作方</td>
+                      <td>Api Key</td>
+                      <td>调用API所使用的的密钥</td>
+                    </tr>
+                    <tr>
+                      <td>商户</td>
+                      <td>Merchant</td>
+                      <td>指委托收单的营业机构</td>
+                    </tr>
+                    <tr>
+                      <td>用户</td>
+                      <td>User</td>
+                      <td>指在商户系统内进行消费的企业或者个人</td>
+                    </tr>
+                    <tr>
+                      <td>商户号</td>
+                      <td>MerchantId</td>
+                      <td>指支付系统为使用外部接入接口的商户统一分配的唯一标识</td>
+                    </tr>
+                    <tr>
+                      <td>商户密钥</td>
+                      <td>Api Secrect</td>
+                      <td>指商户在和系统进行数据签名认证的秘钥，采用RSA加密算法</td>
+                    </tr>
+                  </table>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li id="explainApi" class="explain_info_item">
+          <p class="explain_info_tit">接口说明</p>
+          <ul class="explain_info_ul">
+            <li class="explain_info_li">
+              <div class="explain_info_li_tit"><i></i><span>支付接口</span></div>
+              <ul class="explain_info_li_info">
+                <li>1.概述</li>
+                <li class="min_text">功能描述：该接口用于调用支付接口进行支付，调用接口，会直接调转到金桃支付系统，进行支付，成功返回支付成功，失败返回错误信息。</li>
+                <li class="min_text">协议：HTTP</li>
+                <li class="min_text">请求类型：POST</li>
+                <li class="min_text">接收介质类型：application/json</li>
+                <li class="min_text">返回介质类型：application/json</li>
+                <li class="min_text">编码：UTF-8</li>
+              </ul>
+              <ul class="explain_info_li_info">
+                <li>2.请求URL</li>
+                <li class="min_text">a.接入URL：http://aupay.one/api/payment/order/payment</li>
+                <li class="min_text">b.请求协议参数</li>
+                <li class="min_text">
+                  <table class="explain_table" border="1" cellspacing="0">
+                    <tr>
+                      <th>参数名</th>
+                      <th>参数</th>
+                      <th>参数类型</th>
+                      <th>必填</th>
+                      <th>说明</th>
+                    </tr>
+                    <tr>
+                      <td>商户号</td>
+                      <td>merchantId</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>商户号：商户在接入auPay时分配唯一商户号</td>
+                    </tr>
+                    <tr>
+                      <td>订单编号</td>
+                      <td>merchantPaymentNo</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>商户订单号，需要具有唯一性</td>
+                    </tr>
+                    <tr>
+                      <td>订单金额</td>
+                      <td>paymentAmount</td>
+                      <td>DECIMAL</td>
+                      <td>true</td>
+                      <td>订单金额（单位，元）请至少符合一种渠道限额</td>
+                    </tr>
+                    <tr>
+                      <td>商家同步通知地址</td>
+                      <td>returnUrl</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>支付成功后界面显示的地址，如果没有则使用商户申请地址</td>
+                    </tr>
+                    <tr>
+                      <td>商家异步通知地址</td>
+                      <td>notifyUrl</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>支付成功后，调取商家的接口，通知商家支付成功，优先使用商户后台设置的异步通知地址，如未设置则使用该参数。</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="min_text">c. 请求头</li>
+                <li class="min_text">
+                  <table class="explain_table" border="1" cellspacing="0">
+                    <tr>
+                      <th>参数名</th>
+                      <th>参数</th>
+                      <th>参数类型</th>
+                      <th>必填</th>
+                      <th>说明</th>
+                    </tr>
+                    <tr>
+                      <td>参数签名</td>
+                      <td>AUPAY-SIGN</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>根据请求参数签名</td>
+                    </tr>
+                  </table>
+                </li>
+                <li>3. 接入实例</li>
+                <li class="min_text">签名加密前链接字符串格式类似下面案例</li>
+                <li class="min_bold_text">请求提交方法</li>
+                <li class="min_text">
+                  <div class="api_info">
+                    <p>JSONObject obj = {"merchantPaymentNo":"hongyubettest28",</p>
+                    <p>"merchantId":"auPay1",</p>
+                    <p>"notifyUrl":"https://www.aucloudtest.com/pay/",</p>
+                    <p>"returnUrl":"https://www.aucloudtest.com",</p>
+                    <p>"paymentAmount":"1000"}; </p>
+                    <p>String apiKey = <i>"112ec478495f4a04abb4f387f55398f4"</i>;</p>
+                    <p>String apisecrect = <i>"3376e2766a3e41d8a2e77cb84e5455f2"</i>;</p>
+                    <p>String signSource = obj.toJSONString() + "apikey="; //json字符串</p>
+                    <p>signSource += apiKey;</p>
+                    <p>//<i>HmacSHA256</i></p>
+                    <p>Mac sha256_HMAC = Mac.getInstance(<i>"HmacSHA256"</i>);</p>
+                    <p>SecretKeySpec secret_key = new SecretKeySpec(apisecrect.getBytes(), <i>"HmacSHA256"</i>);</p>
+                    <p>sha256_HMAC.init(secret_key);</p>
+                    <p>byte[] bytes = sha256_HMAC.doFinal(source.getBytes());</p>
+                    <p>sign = Base64.getEncoder().encodeToString(bytes); //<i>Base64</i></p>
+                  </div>
+                </li>
+                <li class="min_bold_text">返回值</li>
+                <li class="min_text">
+                  <div class="api_info">
+                    <p>{"code":200,"message":"成功","data":"http://aupay.one:8087/paymentIndex?paymentAmount=1000&token=9a920
+                      b6923f74c5f945a1827e7a78c64&paymentOrderId=payment20200818112600001&merchantId=auPay1"}</p>
+                    <p>signSource:{"merchantPaymentNo":"hongyubettest28","merchantId":"auPay1","notifyUrl":"https://www.aucloudtest.com/pa
+                      y/","returnUrl":"https://www.aucloudtest.com","paymentAmount":"1000"}apikey=112ec478495f4a04abb4f387f
+                      55398f4</p>
+                      <p>Sign: VjIpt2fOFnY48MU7w9euGtD4l332TgD4NI3VnxzdROY=</p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="explain_info_li">
+              <div class="explain_info_li_tit"><i></i><span>异步通知</span></div>
+              <ul class="explain_info_li_info">
+                <li>1. 支付异步通知</li>
+                <li class="min_text">a.接入URL：请求参数NotifyURL</li>
+                <li class="min_text">b.接入方式：post请求json数据</li>
+                <li class="min_text">c.通知请求协议参数</li>
+                <li class="min_text">
+                  <table class="explain_table" border="1" cellspacing="0">
+                    <tr>
+                      <th>参数名</th>
+                      <th>参数</th>
+                      <th>参数类型</th>
+                      <th>必填</th>
+                      <th>说明</th>
+                    </tr>
+                    <tr>
+                      <td>订单编号</td>
+                      <td>merchantPaymentNo</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>商户订单号，需要具有唯一性</td>
+                    </tr>
+                    <tr>
+                      <td>订单金额</td>
+                      <td>amount</td>
+                      <td>DECIMAL</td>
+                      <td>true</td>
+                      <td>订单金额，单位：元</td>
+                    </tr>
+                    <tr>
+                      <td>商户编号</td>
+                      <td>merchantId</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>auPay平台商户唯一ID</td>
+                    </tr>
+                    <tr>
+                      <td>系统编号</td>
+                      <td>paymentOrderId</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>auPay生成唯一Id</td>
+                    </tr>
+                    <tr>
+                      <td>签名</td>
+                      <td>sign</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>验证签名</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="min_bold_text">实例</li>
+                <li class="min_text">接受到的参数按照DEMO的字符串链接顺序,为防止顺序导致签名错误，组合成字符串，如下(大写为需替换字符)</li>
+                <li class="min_text">
+                  <div class="api_info">
+                    <p>signSource=<i>merchantPaymentNo=MERCHANTPAYMENTNO&paymentOrderId=PAYMENTORDERID&merchantId=
+                      MERCHANTID&amount=AMOUNT&key=KEY</i></p>
+                    <p>String apiKey = <i>"112ec478495f4a04abb4f387f55398f4"</i>;</p>
+                    <p>String apisecrect = <i>"3376e2766a3e41d8a2e77cb84e5455f2"</i>;</p>
+                    <p>//<i>HmacSHA256</i></p>
+                    <p>Mac sha256_HMAC = Mac.getInstance(<i>"HmacSHA256"</i>);</p>
+                    <p>SecretKeySpec secret_key = new SecretKeySpec(apisecrect.getBytes(), <i>"HmacSHA256"</i>);</p>
+                    <p>sha256_HMAC.init(secret_key);</p>
+                    <p> </p>
+                    <p>byte[] bytes = sha256_HMAC.doFinal(source.getBytes());</p>
+                    <p>sign = Base64.getEncoder().encodeToString(bytes); //<i>Base64</i></p>
+                  </div>
+                </li>
+                <li>2. 提币异步通知</li>
+                <li class="min_text">a.接入URL：请求参数NotifyURL</li>
+                <li class="min_text">b.接入方式：post请求json数据</li>
+                <li class="min_text">c.通知请求协议参数</li>
+                <li class="min_text">
+                  <table class="explain_table" border="1" cellspacing="0">
+                    <tr>
+                      <th>参数名</th>
+                      <th>参数</th>
+                      <th>参数类型</th>
+                      <th>必填</th>
+                      <th>说明</th>
+                    </tr>
+                    <tr>
+                      <td>订单编号</td>
+                      <td>merchantDrawNo</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>商户订单号，需要具有唯一性</td>
+                    </tr>
+                    <tr>
+                      <td>订单金额</td>
+                      <td>amount</td>
+                      <td>DECIMAL</td>
+                      <td>true</td>
+                      <td>订单金额，单位：元</td>
+                    </tr>
+                    <tr>
+                      <td>商户编号</td>
+                      <td>merchantId</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>auPay平台商户唯一ID</td>
+                    </tr>
+                    <tr>
+                      <td>系统编号</td>
+                      <td>drawOrderId</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>auPay生成唯一Id</td>
+                    </tr>
+                    <tr>
+                      <td>签名</td>
+                      <td>sign</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>验证签名</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="min_bold_text">实例</li>
+                <li class="min_text">接受到的参数按照DEMO的字符串链接顺序,为防止顺序导致签名错误，组合成字符串，如下(大写为需替换字符)</li>
+                <li class="min_text">
+                  <div class="api_info">
+                    <p>signSource=<i>merchantDrawNo=MERCHANTDRAWNO&drawOrderId=DRAWORDERID&merchantId=MERCHANTID&
+                      amount=AMOUNT&key=KEY</i></p>
+                    <p>String apiKey = <i>"112ec478495f4a04abb4f387f55398f4"</i>;</p>
+                    <p>String apisecrect = <i>"3376e2766a3e41d8a2e77cb84e5455f2"</i>;</p>
+                    <p>//<i>HmacSHA256</i></p>
+                    <p>Mac sha256_HMAC = Mac.getInstance(<i>"HmacSHA256"</i>);</p>
+                    <p>SecretKeySpec secret_key = new SecretKeySpec(apisecrect.getBytes(), <i>"HmacSHA256"</i>);</p>
+                    <p>sha256_HMAC.init(secret_key);</p>
+                    <p> </p>
+                    <p>byte[] bytes = sha256_HMAC.doFinal(source.getBytes());</p>
+                    <p>sign = Base64.getEncoder().encodeToString(bytes); //<i>Base64</i></p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="explain_info_li">
+              <div class="explain_info_li_tit"><i></i><span>提币接口</span></div>
+              <ul class="explain_info_li_info">
+                <li>1.概述</li>
+                <li class="min_text">功能描述：该接口用于调用支付接口进行支付，调用接口，会直接调转到金桃支付系统，进行支付，成功返回支付成功，失败返回错误信息</li>
+                <li class="min_text">协议：HTTP</li>
+                <li class="min_text">请求类型：POST</li>
+                <li class="min_text">接收介质类型：application/json</li>
+                <li class="min_text">返回介质类型：application/json</li>
+                <li class="min_text">编码：UTF-8</li>
+                <li>2. 请求URL</li>
+                <li class="min_text">a.接入URL：http://aupay.one/api/payment/order/withdraw</li>
+                <li class="min_text">b.请求协议参数</li>
+                <li class="min_text">
+                  <table class="explain_table" border="1" cellspacing="0">
+                    <tr>
+                      <th>参数名</th>
+                      <th>参数</th>
+                      <th>参数类型</th>
+                      <th>必填</th>
+                      <th>说明</th>
+                    </tr>
+                    <tr>
+                      <td>商户号</td>
+                      <td>merchantId</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>商户号：商户在接入auPay时分配唯一商户号</td>
+                    </tr>
+                    <tr>
+                      <td>订单编号</td>
+                      <td>merchantDrawNo</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>商户订单号，需要具有唯一性</td>
+                    </tr>
+                    <tr>
+                      <td>订单金额</td>
+                      <td>drawAmount</td>
+                      <td>DECIMAL</td>
+                      <td>true</td>
+                      <td>订单金额，单位：元(与数币数量二选一)</td>
+                    </tr>
+                    <tr>
+                      <td>数币数量</td>
+                      <td>currencyAmount</td>
+                      <td>DECIMAL</td>
+                      <td>true</td>
+                      <td>数币数量，单位：USDT(与订单金额二选一)</td>
+                    </tr>
+                    <tr>
+                      <td>商家同步通知地址</td>
+                      <td>returnUrl</td>
+                      <td>VARCHAR</td>
+                      <td>false</td>
+                      <td>支付成功后界面显示的地址，如果没有则使用商户申请地址</td>
+                    </tr>
+                    <tr>
+                      <td>商家异步通知地址</td>
+                      <td>notifyUrl</td>
+                      <td>VARCHAR</td>
+                      <td>false</td>
+                      <td>支付成功后，调取商家的接口，通知商家支付成功，优先使用商户后台设置的异步通知地址，如未设置则使用该参数。</td>
+                    </tr>
+                    <tr>
+                      <td>提币渠道</td>
+                      <td>drawChannelId</td>
+                      <td>VARCHAR</td>
+                      <td>false</td>
+                      <td>提币渠道，转账币种</td>
+                    </tr>
+                    <tr>
+                      <td>提币地址</td>
+                      <td>receiveAddress</td>
+                      <td>VARCHAR</td>
+                      <td>false</td>
+                      <td>提币地址</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="min_text">c. 请求头</li>
+                <li class="min_text">
+                  <table class="explain_table" border="1" cellspacing="0">
+                    <tr>
+                      <th>参数名</th>
+                      <th>参数</th>
+                      <th>参数类型</th>
+                      <th>必填</th>
+                      <th>说明</th>
+                    </tr>
+                    <tr>
+                      <td>参数签名</td>
+                      <td>AUPAY-SIGN</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>根据请求参数签名</td>
+                    </tr>
+                  </table>
+                </li>
+                <li>3. 接入实例</li>
+                <li class="min_text">签名加密前链接字符串格式类似下面案例</li>
+                <li class="min_bold_text">请求提交方法</li>
+                <li class="min_text">
+                  <div class="api_info">
+                    <p>
+                      String apiKey = <i>"112ec478495f4a04abb4f387f55398f4"</i>; <br>
+                      String apisecrect = <i>"3376e2766a3e41d8a2e77cb84e5455f2"</i>;<br>
+
+                      //请求数据<br>
+                      JSONObject obj = {"merchantId":"auPay1",<br>
+                      "notifyUrl":"https://www.aucloudtest.com/draw/",<br>
+                      "drawAmount":"500",<br>
+                      "returnUrl":"https://www.aucloudtest.com",<br>
+                      "merchantDrawNo":"10"};<br>
+                      String signSource = obj.toJSONString() + "apikey="; //json字符串<br>
+                      signSource += apiKey;<br>
+                      //<i>HmacSHA256</i><br>
+                      Mac sha256_HMAC = Mac.getInstance(<i>"HmacSHA256"</i>);<br>
+                      SecretKeySpec secret_key = new SecretKeySpec(apisecrect.getBytes(), <i>"HmacSHA256"</i>);<br>
+                      sha256_HMAC.init(secret_key);<br>
+                      byte[] bytes = sha256_HMAC.doFinal(source.getBytes());<br>
+                      sign = Base64.getEncoder().encodeToString(bytes); //<i>Base64</i>
+                    </p>
+                  </div>
+                </li>
+                <li class="min_bold_text">返回值</li>
+                <li class="min_text">
+                  <div class="api_info">
+                    <p>
+                      {"code":200,"message":"成功","data":"http://aupay.one:8087/drawIndex?drawAmount=100&token=f85d7d6cdfef4ab799cf9cfc540ba3ff&drawOrderId=draw20200818153900001&merchantId=auPay1"} <br>
+                      signSource: {"merchantId":"auPay1","notifyUrl":"https://www.aucloudtest.com/draw/","drawAmount":"100","returnUrl":"https://www.aucloudtest.com","merchantDrawNo":"10"}apikey=112ec478495f4a04abb4f387f55398f4<br>
+                      Sign: za205/pzC2Ys74pSM/KIxfuqw6nbpjgp6EkI5zNb5qs==
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="explain_info_li">
+              <div class="explain_info_li_tit"><i></i><span>交易查询</span></div>
+              <ul class="explain_info_li_info">
+                <li>1.商户充值交易查询 <i class="explain_red">(因请求内容包含merchantId和apiKey 不建议直接在前端进行请求)</i></li>
+                <li class="min_text">a.接入URL：http://aupay.one/api/payment/getPaymentInfo</li>
+                <li class="min_text">b.接入方式：get方式</li>
+                <li class="min_text">c.交易查询请求协议参数</li>
+                <li class="min_text">
+                  <table class="explain_table" border="1" cellspacing="0">
+                    <tr>
+                      <th>参数名</th>
+                      <th>参数</th>
+                      <th>参数类型</th>
+                      <th>必填</th>
+                      <th>说明</th>
+                    </tr>
+                    <tr>
+                      <td>订单编号</td>
+                      <td>paymentOrderId or merchantPaymentNo</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>商户订单号或系统订单号2选1,如果两个参数都传按照paymentOrderId获取</td>
+                    </tr>
+                    <tr>
+                      <td>商户号</td>
+                      <td>merchantId</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>auPay平台商户唯一ID</td>
+                    </tr>
+                    <tr>
+                      <td>Api密钥</td>
+                      <td>apiKey</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>API请求密钥</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="min_text">d.返回协议参数</li>
+                <li class="min_text">
+                  <table class="explain_table" border="1" cellspacing="0">
+                    <tr>
+                      <th>参数名</th>
+                      <th>参数</th>
+                      <th>参数类型</th>
+                      <th>说明</th>
+                    </tr>
+                    <tr>
+                      <td>返回码</td>
+                      <td>code</td>
+                      <td>int</td>
+                      <td>返回码（200成功 201..等错误码）</td>
+                    </tr>
+                    <tr>
+                      <td>返回信息</td>
+                      <td>message</td>
+                      <td>VARCHAR</td>
+                      <td>返回信息（包含错误类型说明）</td>
+                    </tr>
+                    <tr>
+                      <td>订单信息</td>
+                      <td>data</td>
+                      <td>jsonobj</td>
+                      <td>见下方说明</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="min_text">e. data参数说明</li>
+                <li class="min_text">
+                  <table class="explain_table" border="1" cellspacing="0">
+                    <tr>
+                      <th>参数名</th>
+                      <th>参数</th>
+                      <th>参数类型</th>
+                      <th>必填</th>
+                      <th>说明</th>
+                    </tr>
+                    <tr>
+                      <td>订单编号</td>
+                      <td>merchantPaymentNo</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>商户在auPay平台唯一ID</td>
+                    </tr>
+                    <tr>
+                      <td>订单金额</td>
+                      <td>amount</td>
+                      <td>DECIMAL</td>
+                      <td>true</td>
+                      <td>订单金额，单位：元</td>
+                    </tr>
+                    <tr>
+                      <td>商户编号</td>
+                      <td>merchantId</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>auPay平台商户唯一ID</td>
+                    </tr>
+                    <tr>
+                      <td>系统编号</td>
+                      <td>paymentOrderId</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>auPay平台订单唯一ID</td>
+                    </tr>
+                    <tr>
+                      <td>订单状态</td>
+                      <td>status</td>
+                      <td>int</td>
+                      <td>true</td>
+                      <td>1到账0未到账</td>
+                    </tr>
+                  </table>
+                </li>
+                <li>2.商户提币交易查询 <i class="explain_red">(因请求内容包含merchantId和apiKey 不建议直接在前端进行请求)</i></li>
+                <li class="min_text">a.接入URL：http://aupay.one/api/payment/getDrawInfo</li>
+                <li class="min_text">b.接入方式：get方式</li>
+                <li class="min_text">c.交易查询请求协议参数</li>
+                <li class="min_text">
+                  <table class="explain_table" border="1" cellspacing="0">
+                    <tr>
+                      <th>参数名</th>
+                      <th>参数</th>
+                      <th>参数类型</th>
+                      <th>必填</th>
+                      <th>说明</th>
+                    </tr>
+                    <tr>
+                      <td>订单编号</td>
+                      <td>drawOrderId or merchantDrawNo</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>商户订单号或系统订单号2选1,如果两个参数都传按照paymentOrderId获取</td>
+                    </tr>
+                    <tr>
+                      <td>商户号</td>
+                      <td>merchantId</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>商户在auPay平台唯一ID</td>
+                    </tr>
+                    <tr>
+                      <td>Api密钥</td>
+                      <td>apiKey</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>API请求密钥</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="min_text">d.返回协议参数</li>
+                <li class="min_text">
+                  <table class="explain_table" border="1" cellspacing="0">
+                    <tr>
+                      <th>参数名</th>
+                      <th>参数</th>
+                      <th>参数类型</th>
+                      <th>说明</th>
+                    </tr>
+                    <tr>
+                      <td>返回码</td>
+                      <td>code</td>
+                      <td>int</td>
+                      <td>返回码（200成功 201..等错误码）</td>
+                    </tr>
+                    <tr>
+                      <td>返回信息</td>
+                      <td>message</td>
+                      <td>VARCHAR</td>
+                      <td>返回信息（包含错误类型说明）</td>
+                    </tr>
+                    <tr>
+                      <td>订单信息</td>
+                      <td>data</td>
+                      <td>jsonobj</td>
+                      <td>见下方说明</td>
+                    </tr>
+                  </table>
+                </li>
+                <li class="min_text">e. data参数说明</li>
+                <li class="min_text">
+                  <table class="explain_table" border="1" cellspacing="0">
+                    <tr>
+                      <th>参数名</th>
+                      <th>参数</th>
+                      <th>参数类型</th>
+                      <th>必填</th>
+                      <th>说明</th>
+                    </tr>
+                    <tr>
+                      <td>订单编号</td>
+                      <td>merchantDrawNo</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>商户在auPay平台唯一ID</td>
+                    </tr>
+                    <tr>
+                      <td>订单金额</td>
+                      <td>amount</td>
+                      <td>DECIMAL</td>
+                      <td>true</td>
+                      <td>订单金额，单位：元</td>
+                    </tr>
+                    <tr>
+                      <td>商户编号</td>
+                      <td>merchantId</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>auPay平台商户唯一ID</td>
+                    </tr>
+                    <tr>
+                      <td>系统编号</td>
+                      <td>drawOrderId</td>
+                      <td>VARCHAR</td>
+                      <td>true</td>
+                      <td>auPay平台订单唯一ID</td>
+                    </tr>
+                    <tr>
+                      <td>订单状态</td>
+                      <td>status</td>
+                      <td>int</td>
+                      <td>true</td>
+                      <td>1已到账 2已汇出 3处理中 0失败</td>
+                    </tr>
+                  </table>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li id="explainCode" class="explain_info_item">
+          <p class="explain_info_tit">错误码说明</p>
+          <ul class="explain_info_ul">
+            <li class="explain_info_li">
+              <div class="explain_info_li_tit"><i></i><span>附录错误码说明</span></div>
+              <ul class="explain_info_li_info">
+                <li>
+                  <table class="explain_table" border="1" cellspacing="0">
+                    <tr>
+                      <th>错误码</th>
+                      <th>说明</th>
+                      <th>备注</th>
+                    </tr>
+                    <tr>
+                      <td>1010</td>
+                      <td>商户不存在</td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>1009</td>
+                      <td>签名错误</td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>1008</td>
+                      <td>参数错误</td>
+                      <td> </td>
+                    </tr>
+                    <tr>
+                      <td>900</td>
+                      <td>其他错误(详见message说明)</td>
+                      <td> </td>
+                    </tr>
+                  </table>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </div>
+    </div>
+  </div>
+
+  <!--  public footer start-->
+  <div class="public_footer">
+    <div class="footer_bg">
+      <img class="footer_bg_pc" src="./static/website/images/footerBg.png" alt="">
+      <img class="footer_bg_mobile" src="./static/website/images/footerMobile.png" alt="">
+    </div>
+    <div class="public_footer_txt">
+      <div onclick="location.href = '/'" class="footer_logo"><img src="./static/website/images/logo.png" alt=""></div>
+      <h4>安全、高效、全球化支付服务</h4>
+      <div class="blogroll"><a href="">auPay官网</a><i>|</i><a href="">auPay商户系统</a><i>|</i><a href="./apply.html">auPay开户申请</a><i>|</i><a href="/">auPay.one</a></div>
+      <div class="copyright">
+        <p>Copyright © 2021 auPay.one All rights reserved</p>
+      </div>
+    </div>
+  </div>
+  <!--  public footer end-->
+  
+  <script src="./static/website/js/jquery.js"></script>
+  <script src="./static/website/js/public.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+.public_tit {
+  padding: 70px 0 28px;
+}
+@media (max-width: 1200px) {
+  .public_tit {
+    padding: 56px 0 22px;
+  }
+}
+@media (max-width: 768px) {
+  .public_tit {
+    padding: 45px 0 17px;
+  }
+}
+/* advantage start */
+.adv_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.adv_list li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.adv_li_top .adv_img{
+  margin-bottom: 130px;
+}
+.adv_li_foo {
+  margin-top: 130px;
+}
+.adv_list li .adv_txt {
+  text-align: center;
+  /* width: 120px; */
+}
+.adv_list li .adv_txt p {
+  font-size: 16px;
+  font-family: Alibaba-PuHuiTi-R, Alibaba-PuHuiTi;
+  font-weight: normal;
+  color: #333333;
+  line-height: 22px;
+  margin-bottom: 11px;
+}
+.adv_list li .adv_txt span {
+  font-size: 14px;
+  font-family: AlibabaPuHuiTiL;
+  color: #666666;
+  line-height: 20px;
+}
+
+@media (max-width: 996px) {
+  .adv_li_top .adv_img {
+    margin-bottom: 100px;
+  }
+  .adv_li_foo {
+    margin-top: 100px;
+  }
+  .adv_list li .adv_txt p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .adv_list li .adv_txt span {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .arrow_img {
+    display: none;
+  }
+  .adv_li_top .adv_img {
+    margin-bottom: 0;
+  }
+  .adv_li_foo {
+    margin-top: 0;
+  }
+}
+@media (max-width: 640px) {
+  .adv_list {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  .adv_list li {
+    width: 45%;
+  }
+}
+@media (max-width: 360px) {
+  .adv_list li {
+    width: 49%;
+  }
+}
+/* advantage end */
+
+/* process start */
+.process {
+  margin-top: 76px;
+  padding-bottom: 168px;
+  background: url('../images/advantage/processBg.png') no-repeat;
+  background-size: 100% 100%;
+  background-color: white;
+}
+.process .process_img {
+  width: 700px;
+  margin: 0 auto;
+}
+.process .public_tit {
+  padding: 140px 0 40px;
+}
+@media (max-width: 1200px) {
+  .process {
+    margin-top: 60px;
+    padding-bottom: 135px;
+  }
+  .process .public_tit {
+    padding: 115px 0 32px;
+  }
+  .process .process_img {
+    width: 560px;
+  }
+}
+@media (max-width: 996px) {
+  .process {
+    margin-top: 5%;
+    padding-bottom: 8%;
+  }
+  .process .public_tit {
+    padding: 10% 0 2%;
+  }
+  .process .process_img {
+    width: 50%;
+  }
+}
+@media (max-width: 996px) {
+  .process .process_img {
+    width: 70%;
+  }
+}
+@media (max-width: 480px) {
+  .process .public_tit {
+    padding: 15% 0 2%;
+  }
+}
+/* process end */
+
+/* scene start */
+.scene .public_tit {
+  padding: 0 0 70px;
+}
+.scene_list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-right: -3%;
+}
+.scene_list li {
+  width: 13.5%;
+  margin-right: 3.1%;
+}
+.scene_list li .scene_img {
+  width: 46px;
+}
+.scene_img img {
+  transition: all .5s ease;
+}
+.scene_img:hover img {
+  transform: rotateY(-60deg);
+}
+.scene_list li .scene_txt p {
+  font-size: 16px;
+  font-family: Alibaba-PuHuiTi-R, Alibaba-PuHuiTi;
+  font-weight: normal;
+  color: #333333;
+  line-height: 22px;
+  margin: 20px 0;
+}
+.scene_list li .scene_txt span {
+  font-size: 14px;
+  font-family: AlibabaPuHuiTiL;
+  color: #666666;
+  line-height: 26px;
+}
+@media (max-width: 1200px) {
+  .scene .public_tit {
+    padding: 0 0 7%;
+  }
+  .scene_list li {
+    width: 20%;
+    margin-right: 5%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 996px) {
+  .scene_list li .scene_txt p {
+    margin: 6% 0;
+  }
+}
+@media (max-width: 768px) {
+  .scene_list li {
+    width: 30%;
+    margin-right: 3%;
+  }
+  .scene_list li .scene_txt p {
+    font-size: 14px;
+  }
+  .scene_list li .scene_txt span {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .scene_list {
+    margin-right: 0;
+    justify-content: space-between;
+  }
+  .scene_list li {
+    width: 48%;
+    margin-right: 0%;
+  }
+}
+/* scene end */
+.public_footer {
+  margin-top: -5%;
+}
+@media (max-width: 1700px) {
+  .public_footer {
+    margin-top: -9%;
+  }
+}
+@media (max-width: 1300px) {
+  .public_footer {
+    margin-top: -14%;
+  }
+}
+@media (max-width: 768px) {
+  .public_footer {
+    margin-top: 3%;
+  }
+}
+
+.arrow_img {
+  animation: arrowScale 1.5s linear infinite;
+}
+@keyframes arrowScale {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+.adv_img img {
+  transition: all 1.2s ease;
+}
+.adv_img:hover img {
+  transform: rotateY(180deg);
+}

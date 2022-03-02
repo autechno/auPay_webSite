@@ -1,0 +1,186 @@
+body {
+  background: #F9FBFF;
+}
+
+.apply_w {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  min-height: 750px;
+}
+.apply_tit {
+  display: flex;
+  align-items: center;
+}
+.apply_logo {
+  width: 150px;
+  cursor: pointer;
+}
+.apply_tit i {
+  display: block;
+  width: 2px;
+  height: 30px;
+  background: #D8D8D8;
+  border-radius: 2px;
+  margin: 0 26px 0 10px;
+}
+.apply_tit h2 {
+  font-size: 36px;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  font-weight: 500;
+  color: #666666;
+}
+.apply_form {
+  padding: 40px;
+  margin-top: 30px;
+  width: 440px;
+  height: 632px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 30px 16px rgba(35, 36, 38, 0.05);
+}
+.apply_item {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  width: 100%;
+  height: 40px;
+  background: #FFFFFF;
+  border-radius: 4px;
+  border: 1px solid #E6E6E6;
+  margin-bottom: 15px;
+  position: relative;
+}
+.apply_item_textarea {
+  height: 80px;
+  align-items: flex-start;
+}
+.apply_item_textarea textarea {
+  height: 65px;
+  margin-top: 2px;
+}
+.input_error {
+  font-size: 12px;
+  position: absolute;
+  left: 0;
+  bottom: -17px;
+  color: #C13900;
+  display: none;
+}
+.apply_item_icon {
+  width: 16px;
+  margin: 0 10px;
+}
+.apply_item input, textarea {
+  width: 100%;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  border: none;
+  outline: none;
+}
+.apply_item input:focus, .apply_item input:active {
+  border: none;
+}
+input::-webkit-input-placeholder, input::-moz-placeholder, input:-moz-placeholder, input:-ms-input-placeholder {
+  color:#AAAAAA;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+.submit {
+  width: 100%;
+  height: 40px;
+  background: #3363D0;
+  border-radius: 3px;
+  font-size: 16px;
+  font-family: PingFang-SC-Medium, PingFang-SC;
+  color: #FFFFFF;
+  margin-top: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/* 区号 */
+.sele_area {
+  position: relative;
+}
+#areaKey {
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  margin-right: 10px;
+  cursor: pointer;
+  /* width: 35px; */
+}
+.area_list {
+  display: none;
+  width: 150px;
+  height: 300px;
+  background: white;
+  position: absolute;
+  z-index: 2;
+  overflow: auto;
+  top: 25px;
+  left: 0;
+  padding: 10px;
+  -webkit-box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+  box-shadow: 0 2px 12px 0 rgb(0 0 0 / 10%);
+}
+.area_list li {
+  font-size: 12px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #333333;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .apply_w {
+    padding: 0 15px;
+  }
+  .apply_logo {
+    width: 120px;
+  }
+  .apply_tit h2 {
+    font-size: 28px;
+  }
+  .apply_form {
+    margin-top: 3%;
+    padding: 8% 5%;
+    width: 100%;
+  }
+  .apply_item input, textarea {
+    font-size: 12px;
+  }
+  #areaKey {
+    font-size: 12px;
+  }
+  .area_list {
+    height: 200px;
+  }
+}
+.apply_item_radio {
+  border: none;
+  justify-content: flex-start;
+  margin-bottom: 0;
+  height: auto;
+}
+.apply_item_radio input {
+  width: auto;
+  margin-right: 5px;
+}
+.apply_item_radio p {
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+}
+.apply_item_radio a {
+  color: #3363D0;
+}

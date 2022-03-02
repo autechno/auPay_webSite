@@ -1,0 +1,390 @@
+/*   enter account start*/
+.enter_w {
+  background: #f9fafd;
+  position: relative;
+  height: 120px;
+}
+.enter_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -70px;
+  z-index: 5;
+  height: 100%;
+}
+.enter_list li {
+  width: 31%;
+  height: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.enter_list li a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+.enter_list li .enter_img {
+  width: 51%;
+}
+.enter_list li .enter_img img {
+  height: 100%;
+  object-fit: cover;
+}
+.enter_list li .enter_arrow {
+  width: 49%;
+  height: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px 0 30px;
+}
+.enter_list li .enter_arrow p {
+  font-size: 18px;
+  font-family: AlibabaPuHuiTiL;
+  color: #333333;
+  line-height: 25px;
+}
+.enter_list li .enter_arrow img {
+  width: 18px;
+  transition: all .5s ease;
+}
+.enter_list li:hover .enter_arrow img {
+  transform: translateX(5px);
+}
+@media (max-width: 1204px) {
+  .enter_w {
+    height: 100px;
+  }
+  .enter_list li .enter_arrow {
+    padding: 0 3% 0 5%;
+  }
+  .enter_list li .enter_arrow p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 996px) {
+  .enter_w {
+    height: 90px;
+  }
+  .enter_list li .enter_arrow {
+    padding: 0 3% 0 5%;
+  }
+  .enter_list li .enter_arrow p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .enter_w {
+    padding: 20px 0;
+    height: auto;
+  }
+  .enter_list {
+    position: initial;
+    left: 0;
+    transform: translateX(0);
+    top: 0;
+    flex-direction: column;
+  }
+  .enter_list li {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  .enter_list li .enter_img {
+    width: 40%;
+  }
+  .enter_list li .enter_arrow {
+    width: 100%;
+  }
+}
+@media (max-width: 480px) {
+  .enter_list li {
+    height: 80px;
+  }
+  .enter_list li .enter_img {
+    width: 50%;
+  }
+}
+/*   enter account end*/
+
+/* about platform start */
+.platform {
+  background: #f9fafd;
+}
+.info_list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.info_list li {
+  width: 18%;
+  height: 280px;
+  background: white;
+  padding: 34px 28px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.info_list li .info_icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  position: relative;
+}
+.info_list li .info_icon img {
+  transition: all 1s ease;
+}
+.info_list li p {
+  font-size: 16px;
+  font-family: Alibaba-PuHuiTi-R, Alibaba-PuHuiTi;
+  font-weight: normal;
+  color: #333333;
+  line-height: 22px;
+  margin: 20px 0 10px;
+}
+.info_list li span {
+  font-size: 14px;
+  font-family: AlibabaPuHuiTiL;
+  color: #666666;
+  line-height: 20px;
+}
+.info_icon_normal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotateY(0deg);
+  z-index: 2;
+  background-color: white;
+}
+.info_icon_current {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transform: rotateY(180deg);
+}
+.info_list li:hover .info_icon_normal {
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+.info_list li:hover .info_icon_current {
+  transform: rotateY(0deg);
+  z-index: 2;
+}
+.info_list li:hover p, .info_list li:hover span {
+  color: #3363D0;
+}
+@media (max-width: 1204px) {
+  .info_list {
+    justify-content: space-around;
+  }
+  .info_list li {
+    width: 22%;
+  }
+}
+@media (max-width: 996px) {
+  .info_list {
+    margin-top: 48px;
+  }
+  .info_list li {
+    width: 22%;
+    height: 250px;
+    padding: 2%;
+    margin-bottom: 3%;
+  }
+  .info_list li p {
+    margin: 8% 0 4%;
+    font-size: 14px;
+  }
+  .info_list li span {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .info_list {
+    margin-top: 38px;
+    justify-content: space-between;;
+
+  }
+  .info_list li {
+    width: 30%;
+    margin-bottom: 5%;
+  }
+}
+@media (max-width: 480px) {
+  .info_list {
+    margin-top: 20px;
+  }
+  .info_list li {
+    width: 48%;
+    height: 230px;
+    margin-bottom: 4%;
+  }
+}
+/* about platform end */
+
+
+/* pay ache start */
+.pay_ache {
+  padding-top: 70px;
+}
+.ache_list {
+  width: 80%;
+  margin: 0 auto;
+}
+.ache_list li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.ache_list li .ache_img {
+  width: 40%;
+}
+.ache_list li .ache_img img {
+  width: auto;
+}
+.ache_list li .ache_txt {
+  width: 40%;
+  text-align: left;
+}
+.ache_list li .ache_txt p {
+  font-size: 16px;
+  font-family: AlibabaPuHuiTiR;
+  color: #333333;
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+.ache_list li .ache_txt span {
+  font-size: 14px;
+  font-family: AlibabaPuHuiTiL;
+  color: #666666;
+  line-height: 25px;
+}
+.ache_list li:nth-child(2n) .ache_txt {
+  padding-left: 20px;
+}
+@media (max-width: 768px) {
+  .pay_ache {
+    padding-top: 8%;
+  }
+  .ache_list li .ache_txt p {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .ache_list li .ache_txt span {
+    font-size: 12px;
+  }
+}
+@media (max-width: 480px) {
+  .ache_list {
+    width: 100%;
+  }
+  .ache_list li {
+    margin: 10px 0;
+  }
+}
+/* pay ache end */
+
+/* auPay system start */
+.au_system {
+  background: url('../images/home/manage_bg.jpg') no-repeat;
+  padding-top: 70px;
+  background-size: cover;
+}
+.system_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+.system_info .info_img {
+  width: 57%;
+  overflow: hidden;
+}
+.system_info .info_img img {
+  margin-top: -10%;
+}
+.system_info .info_txt {
+  width: 40%;
+  margin-top: -15%;
+}
+.system_info .info_txt p {
+  font-size: 18px;
+  font-family: Alibaba-PuHuiTi-R, Alibaba-PuHuiTi;
+  font-weight: normal;
+  color: #333333;
+  line-height: 25px;
+  margin-bottom: 20px;
+}
+.system_info .info_txt span {
+  font-size: 14px;
+  font-family: AlibabaPuHuiTiL;
+  color: #666666;
+  line-height: 20px;
+}
+
+@media (max-width: 996px) {
+  .system_info .info_txt p {
+    font-size: 16px;
+  }
+  .system_info .info_txt span {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .au_system {
+    padding-top: 8%;
+  }
+  .system_info .info_txt {
+    width: 45%;
+  }
+  .system_info .info_txt p {
+    font-size: 14px;
+    line-height: 150%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .system_info {
+    width: 100%;
+  }
+  .system_info .info_img img {
+    margin-top: 0;
+  }
+  .system_info .info_txt {
+    width: 49%;
+  }
+  .system_info .info_txt p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .system_info .info_img {
+    width: 40%;
+  }
+  .system_info .info_txt {
+    width: 60%;
+    margin-top: 15px;
+  }
+}
+/* auPay system end */
+
+.public_footer {
+  margin-top: -13%;
+}
+@media (max-width: 2000px) { .public_footer { margin-top: -15%; } }
+@media (max-width: 1800px) { .public_footer { margin-top: -17%; } }
+@media (max-width: 1600px) { .public_footer { margin-top: -19%; } }
+@media (max-width: 1400px) { .public_footer { margin-top: -21%; } }
+@media (max-width: 1300px) { .public_footer { margin-top: -22%; } }
+@media (max-width: 1200px) { .public_footer { margin-top: -24%; } }
+@media (max-width: 1100px) { .public_footer { margin-top: -26%; } }
+@media (max-width: 850px) { .public_footer { margin-top: -28%; } }
+@media (max-width: 768px) { .public_footer { margin-top: 0; } }

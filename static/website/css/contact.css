@@ -1,0 +1,124 @@
+.contact {
+  background: #F9FAFD;
+  padding-top: 80px;
+}
+.contact_list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 2;
+}
+.contact_list li {
+  width: 22%;
+}
+.contact_list li a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: white;
+  padding: 65px 0;
+}
+.contact_img {
+  width: 80px;
+}
+.contact_txt {
+  text-align: center;
+}
+.contact_txt p {
+  font-size: 16px;
+  font-family: Alibaba-PuHuiTi-R, Alibaba-PuHuiTi;
+  font-weight: normal;
+  color: #333333;
+  margin: 30px 0 10px;
+}
+.contact_txt span {
+  font-size: 14px;
+  font-family: AlibabaPuHuiTiL;
+  color: #666666;
+}
+@media (max-width: 996px) {
+  .contact_list li a {
+    padding: 25% 0;
+  }
+  .contact_img {
+    width: 65px;
+  }
+}
+@media (max-width: 768px) {
+  .contact {
+    padding-top: 8%;
+  }
+  .contact_list li {
+    width: 47%;
+    margin-bottom: 5%;
+  }
+}
+@media (max-width: 480px) {
+  .contact_img {
+    width: 50px;
+  }
+  .contact_txt p {
+    margin: 15px 0 5px;
+    font-size: 14px;
+  }
+  .contact_txt span {
+    font-size: 12px;
+  }
+}
+
+.public_footer {
+  position: relative;
+  z-index: 1;
+  background: #F9FAFD;
+  margin-top: 0;
+}
+@media (max-width: 1800px) {
+  .public_footer {
+    margin-top: -2%;
+  }
+}
+@media (max-width: 1600px) {
+  .public_footer {
+    margin-top: -4%;
+  }
+}
+@media (max-width: 1400px) {
+  .public_footer {
+    margin-top: -6%;
+  }
+}
+@media (max-width: 1200px) {
+  .public_footer {
+    margin-top: -8%;
+  }
+}
+@media (max-width: 996px) {
+  .public_footer {
+    margin-top: -9%;
+  }
+}
+@media (max-width: 768px) {
+  .public_footer {
+    margin-top: 3%;
+  }
+}
+
+
+.contact_img img {
+  transition: all .3s ease;
+  border-radius: 50%;
+}
+.contact_list li:hover .contact_img img {
+  box-shadow: 1px 1px 18px -5px #999;
+}
+.contact_list li:hover .contact_txt p {
+  color: #3363D0;
+}
+.contact_list li:hover .contact_txt span {
+  color: #3363D0;
+}
